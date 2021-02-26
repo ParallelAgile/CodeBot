@@ -5,6 +5,8 @@
 layout: home
 ---
 
+![CodeBot from Parallel Agile - documentation](images/Parallel-Agile-CodeBot.png "CodeBot from Parallel Agile - documentation")
+
 Welcome to the how-to guide for CodeBot from [Parallel Agile](http://www.parallelagile.com) (PA).
 
 **CodeBot** is a cloud-based domain-driven, low-code, full-stack application generator. Feed it a domain model from a modeling tool such as Sparx Enterprise Architect, and CodeBot will create a scalable, secure REST API, along with a MongoDB database schema and a Java client library.

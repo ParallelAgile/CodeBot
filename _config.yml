@@ -25,13 +25,23 @@ description: >- # this means to ignore newlines until "baseurl:"
   If you feed it a set of UX wireframes as well, CodeBot will also create a complete, fully functioning React web-app, already integrated with the generated REST API.
 baseurl: "/CodeBot" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: maffstephens
+linkedin_username: parallel-agile
 github_username:  ParallelAgile
+youtube_username: ParallelAgile
 
 # Build settings
+#theme: jekyll-theme-tactile
 theme: minima
 plugins:
   - jekyll-feed
+
+# Show excerpts on the home page:
+show_excerpts: true
+
+header_pages:
+  - EA.md
+  - codegen-process/mvc-use-case.md
+  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
