@@ -40,7 +40,7 @@ show_excerpts: true
 
 header_pages:
   - EA.md
-  - codegen-process/mvc-use-case.md
+  - codegen-process-guide/mvc-use-case.md
   - about.md
 
 # Exclude from processing.
