@@ -31,7 +31,8 @@ youtube_username: ParallelAgile
 
 # Build settings
 #theme: jekyll-theme-tactile
-theme: minima
+#theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
 
