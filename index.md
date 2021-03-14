@@ -21,3 +21,5 @@ CodeBot is designed to work with distributed teams, especially if they're using 
 ![LemonTree from LieberLieber](images/lemontree_logo.png "LemonTree from LieberLieber")
 
 PA has partnered with LieberLieber, to offer a combined software license with their Github version management software [LemonTree](https://www.lieberlieber.com/lemontree/en/).
+
+

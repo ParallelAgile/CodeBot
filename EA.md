@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Enterprise Architect
-permalink: /EA/
+permalink: /EA
 ---
 
 About Enterprise Architect from Sparx Systems...
