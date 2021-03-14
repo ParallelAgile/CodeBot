@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Reference - Attribute Data Types
+title: Attribute Data Types
 permalink: /codebot-reference/attribute-types
 parent: CodeBot Reference
 nav_order: 1
