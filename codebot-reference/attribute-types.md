@@ -2,7 +2,11 @@
 layout: page
 title: Reference - Attribute Data Types
 permalink: /codebot-reference/attribute-types
+parent: CodeBot Reference
+nav_order: 1
 ---
+
+# Reference - Attribute Data Types
 
 Here's a typical domain class added in Enterprise Architect (EA):
 

@@ -45,6 +45,12 @@ header_pages:
   - codegen-process-guide/mvc-use-case.md
   - about.md
 
+
+# just-the-docs settings:
+# See:  https://pmarsceill.github.io/just-the-docs/docs/navigation-structure/
+nav_sort: case_insensitive
+logo: "/images/head-logo.png"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

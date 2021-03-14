@@ -1,7 +1,9 @@
 ---
 layout: page
 title: The case for full MVC code generation
-permalink: /codegen-process-guide/mvc-use-case
+permalink: /articles/mvc-use-case
+parent: Articles
+nav_order: 1
 ---
 
 When software is viewed from a Model View Controller perspective, the generated database access code represents much of the Model part of the code. If you take a simplistic assumption that Model, View and Controller each account for loosely 1/3 of the code, the maximum productivity benefit that’s achievable will likely not exceed this percentage most of the time. Therefore, it’s useful to consider whether similar opportunities for productivity improvement can be achieved by automating the View and Controller portions of the code.
