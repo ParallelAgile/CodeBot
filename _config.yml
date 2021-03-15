@@ -35,7 +35,7 @@ youtube_username: ParallelAgile
 remote_theme: pmarsceill/just-the-docs
 #theme: just-the-docs
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
 
 # Show excerpts on the home page:
 show_excerpts: true

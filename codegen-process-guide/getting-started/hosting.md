@@ -8,3 +8,7 @@ nav_order: 3
 ---
 
 # Hosting
+
+
+
+> **[> Next: Introducing our example project](../lba-example-project)**

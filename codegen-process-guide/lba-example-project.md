@@ -21,8 +21,19 @@ The example project we'll use is a Location Based Advertising (LBA) system. Usin
 
 The idea is that someone with the LBA app on their phone will be alerted of nearby special offers - discount coupons, etc - if they wander within a certain distance of any stores offering the coupons.
 
+The use cases for the LBA website are defined as follows:
+
+![LBA use cases](../images/lba/use-cases.png "LBA use cases")
+
+
+Both Advertisers and Store Owners can Specify Store Details and Create/Edit Offers.  Only the Advertiser can Buy Subscriptions and Pay Invoices.  Admin is a <superuser> role that can exercise all use cases of the system.
+
+
+
 Here's the Store domain class:
 
 ![Store domain class](../images/lba/Store.png "Store domain class")
 
 We'll explore the LBA domain model in more detail, straight after getting everything set up.
+
+> **[> Next: Getting started](getting-started/)**
