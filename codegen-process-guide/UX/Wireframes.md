@@ -52,22 +52,6 @@ To show another layout example, the following wireframe...
 ... uses nested panels to define a more complex layout. The `Store` and `Store Manager` groups are both contained inside a panel, which in turn is contained within the main outer panel. As you can see, the gridlike row/column layout is maintained independently inside each panel.
 
 
-## Define headings
-
-We'll cover component styling in the next page. However, it's worth noting here that you can define headings and subheadings in 2 ways: as a CSS class, or simply by defining the font size. (We recommend that you define the font size even if you define a CSS heading class, so that the wireframe resembles the generated page as closely as possible).
-
-Heading components are no different from other text labels; they're just styled differently. So to create a heading:
-
-1. Drag a Label component onto the wireframe
-2. On the Properties panel, switch to the Tags tab, and enter a tagged value called `css class`, with any of these values, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`
-3. Make the font size big enough to look like a heading, or sub-heading. We recommend size 18 for `h1` headings, and 14 for `h2`.
-
-The following screenshot shows all of these styling elements:
-
-![Styling a label as a heading](../../images/lba/heading-size.png "Styling a label as a heading")
-
-To access the label font, click the **A** icon on the toolbar above the wireframe. And to enter the tagged value, find the Tags tab on the Properties panel. This is on the right in EA's default layout.
-
 You can find a full set of supported [UI components](../../codebot-reference/ui-components) in the [Reference](../../codebot-reference) section.
 (Need a component that isn't yet supported? Email us! support@parallelagile.com).
 
