@@ -15,7 +15,7 @@ In this guide we'll provide an overview of Parallel Agile (PA), and how your pro
 
 Some supposedly scalable agile development processes build on a notably non-scalable core, with additional practices to "add scalability" - which really means "add more processes and ceremonies". However, PA is different, in that it was designed from the ground up for large-scale projects - without adding undue process or ceremony.
 
-Heretical though it may sound, PA's approach means that high levels of communication overhead (e.g. daily scrums and sprint retrospectives) just aren't needed. As a result, PA also works remarkably well on smaller projects!
+Heretical though it may sound, PA's approach means that high levels of communication overhead (e.g. time-consuming daily scrums and sprint retrospectives) just aren't needed. As a result, PA also works remarkably well on smaller projects!
 
 
 ## How it's done
@@ -24,7 +24,7 @@ So, how exactly *does* PA help you to both reduce time-consuming agile ceremony 
 
 There are three fundamental parts:
 
-* Communication when it matters most - early in the project
+* Healthy but intensive amounts of communication when it matters most - early in the project
 * Effective partitioning of work
 * Shared domain model
 * CodeBot!

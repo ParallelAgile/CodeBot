@@ -36,4 +36,4 @@ Here's the Store domain class:
 
 We'll explore the LBA domain model in more detail, straight after getting everything set up.
 
-> **[> Next: Getting started](getting-started/)**
+> **[> Next: Create a domain model](domain-modeling/)**
