@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Data-Bound UI Components
-permalink: /codegen-process-guide/ux/navigation
+permalink: /codegen-process-guide/ux/data-bound-components
 parent: CodeBot UX
 grand_parent: CodeBot Guide
 nav_order: 6
