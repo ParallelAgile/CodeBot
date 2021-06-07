@@ -41,7 +41,11 @@ Click the button at the top-right of the web console to edit the current project
 
 Here you can change the `project name`, `description` and other settings.
 
-It's possible to change the `project code` - double-click the textfield to make it editable. This is "subtly discouraged", though, as the project code is used in the generated API REST endpoints; i.e. the URLs will change. The project code is also used in the hosted API and React website; so any affected apps or bookmarks would need to be updated.
+As you can see, the `project code` ("lba2" in the screenshot) is greyed-out. This is to discourage changing it, as doing so affects the generated REST API endpoints. The `project code` is also used in the hosted API and React website; so any inbound links or bookmarks would need to be updated. It's also used elsewhere, e.g. generated Java package names.
+
+However, there are cases where you might want to change it, e.g. if you're using the "default" project, you might want to change the `project code` to something besides "default".
+
+Simply **double-click** the `project code` text field to make it editable.
 
 The `project name` and `description` are a bit safer to change, though! They're also used in the generated output - they appear in project documentation such as README files and the Swagger/OpenAPI docs.
 

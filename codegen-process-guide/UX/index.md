@@ -9,7 +9,7 @@ has_children: true
 
 # CodeBot UX
 
-![Free420 - example LBA website](../../images/lba/free420-new-account.jpg "Free420 - example LBA website")
+![Bahamas Visitor Guide - example LBA website](../../images/lba/register-bahamas.png "Bahamas Visitor Guide - example LBA website")
 
 In this section you'll learn how to define the overall user experience (UX) for your generated application, in terms of use cases, site navigation ("user flow"), and wireframes.
 

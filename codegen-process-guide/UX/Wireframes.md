@@ -55,4 +55,4 @@ To show another layout example, the following wireframe...
 You can find a full set of supported [UI components](../../codebot-reference/ui-components) in the [Reference](../../codebot-reference) section.
 (Need a component that isn't yet supported? Email us! support@parallelagile.com).
 
-> **[> Next: Style the components](stylesheets)**
+> **[> Next: Include images and other static resources](images)**

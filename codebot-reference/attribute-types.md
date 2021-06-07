@@ -19,18 +19,18 @@ The attribute types (`string`, `int` etc) do have an influence on the generated 
 
 The following data types are recognised by CodeBot. As with "everything CodeBot", this list grows over time; however we'll keep this page updated with all the supported data types:
 
-| Data type | Pseudonyms      | Notes          |
+| Data type | Synonyms        | Notes          |
 | --------- | --------------- | -------------- |
-| `boolean`   | `bool`            |                |
-| `string`    | `char`, `char[]`    |                |
-| `integer`   | `int`             |                |
-| `long`      |                 |                |
-| `float`     |                 |           |
+| `boolean`   | `bool`        |                |
+| `string`    | `char`, `char[]` |             |
+| `integer`   | `int`         |                |
+| `long`      |               |                |
+| `float`     |               |                |
 | `double`    | `number`, `decimal` | Depending on the output target (e.g. JavaScript), all the numeric types may resolve to a common type such as "number" |
-| `date`      |                 | Just the date with no time |
-| `time`      |                 | Time of day with no date |
-| `datetime`  | `timestamp`       | Date and time  |
-| `file`      |                 | Triggers a file upload capability in the REST API. The value stored in the record is simply the original filename. |
+| `date`      |               | Just the date with no time |
+| `time`      |               | Time of day with no date |
+| `datetime`  | `timestamp`   | Date and time  |
+| `file`      |               | Triggers a file upload capability in the REST API. The value stored in the record is simply the original filename. |
 
 All the data types are case insensitive - so you can define them in your model as `Bool`, `BOOL`, `bool` etc.
 

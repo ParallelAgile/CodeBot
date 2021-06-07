@@ -4,7 +4,7 @@ title: Stylesheets
 permalink: /codegen-process-guide/ux/stylesheets
 parent: CodeBot UX
 grand_parent: CodeBot Guide
-nav_order: 3
+nav_order: 4
 ---
 
 # Styling your application
@@ -14,7 +14,7 @@ With any UI, it's important to be able to style it so that, for example, it matc
 
 ## Use tagged values to specify CSS classes
 
-Each wireframe component can be given tagged values, which CodeBot then interprets when it's generating the code. To specify a CSS class, use a tagged value called `css class`. (It's important to enter this as 2 words, *not* joined together as cssclass or css_class etc).
+Each wireframe component can be given tagged values, which CodeBot then interprets when it's generating the code. To specify a CSS class, use a tagged value called `css class`.
 
 You can add any number of CSS classes, either separated by spaces like this:
 
@@ -75,20 +75,47 @@ The [eight variants](https://react-bootstrap.github.io/components/alerts) are:
 
 Using these variants allows your UI to adhere to Bootstrap's recognised design language - if a button is the "main" action on the form ("Ok" or "Submit"), use `primary`; show secondary actions ("Cancel" or "Back") as `secondary`; show success alerts as `success`, etc.
 
-## Using custom styles
+## Using custom stylesheets
 
 It's possible to include custom stylesheets in your wireframes. You can either put all your styles in a single "global" CSS file that will be shared by all the generated pages; or define a separate stylesheet for each page. Or use a combination of the two, with a global stylesheet containing shared styles, and specific styles local to an individual page.
 
-To include a custom stylesheet, you need to place the CSS file somewhere that CodeBot will be able to download it from. You then specify the stylesheet URL using a tagged value called `stylesheet_url_for_build`. Place this on the "outer" panel of the wireframe:
+
+The process for including custom stylesheets is very similar to the process for including images. As with images, there are 2 possible methods:
+
+1. Embed an `Artifact` in the model
+2. Use tagged values to download a stylesheet from the web
+
+### Embed a custom stylesheet as an `Artifact` in the model
+
+In EA, the easiest way to do this is to drag your CSS file straight into the model. Currently you need to drag the file onto a diagram. However, once you've done this, we recommend deleting it from the diagram - you can still find the new asset in the Project Browser.  It's also worth keeping all custom assets together in one subpackage, beneath the Wireframes package, so that they can be located more easily.
+
+Having done the above, the CSS file will be included in the generated React app, under `/public/resources/`.
+
+#### CSS Modules
+
+As with other web toolkits or frameworks, React allows you to limit the scope of a CSS file to a specific component or module. The convention React uses is to name the scope-limited CSS file `something.module.css` instead of just `something.css`.
+
+CodeBot uses the same convention - and will attempt to match the same convention for any future UI platforms it supports.
+
+To match a module CSS file up with the correct "page" component, drag the file asset onto the associated wireframe.
+
+
+### Specify external stylesheets using tagged values
+
+This only works for global stylesheets (i.e. those that are imported for the whole web-app).
+
+To include an external stylesheet, you need to place the CSS file somewhere that CodeBot will be able to download it from. You then specify the stylesheet URL using a tagged value called `stylesheet url`. Place this on the "outer" panel of the wireframe:
 
 ![Styling a label as a heading](../../images/lba/stylesheet-url.png "Styling a label as a heading")
 
-Notice there's also a tagged value called `stylesheet`. This is also important, as it specifies the filename, prefixed with a `./` so that the React build can find it. (In a future update this second tagged value won't be needed).
+CodeBot will use the filename portion of the URL for the downloaded filename, or will choose a filename if one can't be "obviously" derived from the URL.
+
+If you want to override the filename, add a second tagged value called `stylesheet name`. This should simply contain your preferred filename for the custom stylesheet.
 
 The stylesheet URL in the above screenshot is: `https://parallelagile.net/custom-css/style1.css`. It applies some light additional styling to each page, to illustrate how the generated page styles can be customised.
 
-The above 2 tagged values only need to be specified once in the whole application, i.e. to be used globally, the tags only have to appear on one wireframe. The CSS styles are then available in every page.
+**The above 2 tagged values only need to be specified once in the whole application, i.e. to be used globally, the tags only have to appear on one wireframe. The CSS styles are then available in every page.** As a convention, we recommend adding stylesheet URLs to the main landing page (i.e. the page/state that the `Initial` pseudostate points to), so that the URLs can be found easily later on.
 
 
 
-> **[> Next: Join the dots](navigation)**
+> **[> Next: Bind UI components together](state-bound-components)**
