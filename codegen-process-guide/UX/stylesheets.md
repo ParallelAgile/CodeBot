@@ -118,4 +118,4 @@ The stylesheet URL in the above screenshot is: `https://parallelagile.net/custom
 
 
 
-> **[> Next: Bind UI components together](state-bound-components)**
+> **[> Next: Input data with forms](forms)**

@@ -29,4 +29,4 @@ Almost all components can be both state-bound and data-bound.
 If a component is wired up to be both, it takes its initial value from the database, but can then be updated automatically if a linked component updates. An example of this would be a label that initially shows a value from the database, but can be updated if the user drags a slider component.
 
 
-> **[> Next: Join the dots](navigation)**
+> **[> Next: Bind UI components together](state-bound-components)**
