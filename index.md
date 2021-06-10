@@ -13,7 +13,7 @@ This documentation site is organised into the following sections:
 
 * [Articles](articles/) - miscellaneous, useful articles about Parallel Agile and CodeBot
 * [CodeBot process guide](codegen-process-guide/) - in-depth tutorial
-* [CodeBot reference](codebot-reference/)
+* [CodeBot reference](codebot-reference/) - just the details
 * [Parallel Agile process guide](parallel-agile-process-guide) - an overview of this agile development process
 
 **[CodeBot](https://parallelagile.net/)** is a cloud-based domain-driven, low-code, full-stack application generator. Feed it a domain model from a modeling tool such as Sparx Enterprise Architect, and CodeBot will create a scalable, secure REST API, along with a MongoDB database schema and a Java client library.
@@ -27,6 +27,6 @@ CodeBot is designed to work with distributed teams, especially if they're using 
 
 ![LemonTree from LieberLieber](images/lemontree_logo.png "LemonTree from LieberLieber")
 
-PA has partnered with LieberLieber, to offer a combined software license with their Github version management software [LemonTree](https://www.lieberlieber.com/lemontree/en/).
+PA has partnered with LieberLieber, to offer a [combined software license](http://www.parallelagile.com/pricing.html) with their model versioning software for distributed teams, [LemonTree](https://www.lieberlieber.com/lemontree/en/).
 
 

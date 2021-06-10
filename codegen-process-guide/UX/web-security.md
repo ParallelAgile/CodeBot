@@ -9,7 +9,18 @@ nav_order: 9
 
 # Web Security
 
+## Create a sign-up page
 
+![Register page](../../images/forms/register-page.png "Register page")
+
+
+## Create a login page
+
+...
+
+--
+
+> It's also possible to restrict user access by defining roles, and allocating one or more roles to each user - in other words, **Role Based Access Control** (RBAC). This feature is still in development, but an early version is available in Early Access... if you're interested to try it out, please [let us know](mailto:support@parallelagile.com).
 
 --
 

@@ -4,7 +4,7 @@ title: UI Navigation with State Machines
 permalink: /codegen-process-guide/ux/navigation
 parent: CodeBot UX
 grand_parent: CodeBot Guide
-nav_order: 8
+nav_order: 2
 ---
 
 # Defining UI Navigation with State Machines
@@ -13,7 +13,7 @@ Having drawn the wireframes for each use case (or at least, having created the w
 
 You can do this via a straightforward State Machine diagram:
 
-![Navigation state machine](../../images/lba/navigation-state-machine.png "Navigation state machine")
+![Navigation state machine](../../images/lba/navigation-state-machine-annotated.png "Navigation state machine")
 
 Each state in the diagram represents a single screen/page. In effect, you're defining the available navigation transitions if the current "state" is "user is at this page".
 
@@ -25,5 +25,4 @@ Any transition to a new state occurs when a particular trigger is activated. To 
 
 The trigger names are based on UI events ("on click"), which in turn are based on specific components in the source wireframe ("Login"). In the above screenshot, "Login" refers to the button name in the page that the transition is coming from.
 
-
-> **[> Next: Secure your web application](web-security)**
+> **[> Next: Design the wireframes](wireframes)**

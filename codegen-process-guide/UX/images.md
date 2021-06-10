@@ -4,7 +4,7 @@ title: Images and Other Static Resources
 permalink: /codegen-process-guide/ux/images
 parent: CodeBot UX
 grand_parent: CodeBot Guide
-nav_order: 3
+nav_order: 4
 ---
 
 # Images and Other Static Resources

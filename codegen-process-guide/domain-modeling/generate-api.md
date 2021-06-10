@@ -4,7 +4,7 @@ title: Generate Your Project
 permalink: /codegen-process-guide/domain-modeling/generate-api
 parent: Domain Modeling
 grand_parent: CodeBot Guide
-nav_order: 5
+nav_order: 6
 ---
 
 # Generate the Database and REST API
@@ -40,6 +40,10 @@ Or alternatively, download the generated zipfile, unzip it into a directory, and
 
 CodeBot generates a secure database access REST API with (as a minimum) Create, Read, Update, Delete (CRUD) functions.
 
+There are actually two "update"-type operations:
+
+* **Replace** (replace an entire entity/record - equivalent to an HTTP PUT request)
+* **Update** (update individual fields in the entity/record - equivalent to an HTTP PATCH request)
 
 These database access functions can be accessed by screens/web pages generated from wireframes. Linkages between screens and database access functions are specified using UML tagged values.
 

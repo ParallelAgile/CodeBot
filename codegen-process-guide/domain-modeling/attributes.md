@@ -24,4 +24,4 @@ Other attribute types include: int, date, timestamp, time. The Reference section
 
 The attribute types are generic and not tied to any particular language. CodeBot will convert generic attribute types to language-specific types. For example: attribute with type “String” gets converted to “varchar” type for relational database schema and the same attribute gets converted to “String” type for the Java client.
 
-> **[> Next: Connect the domain classes using UML relationships](relationships)**
+> **[> Next: Enumerations](enumerations)**

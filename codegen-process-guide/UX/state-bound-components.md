@@ -4,7 +4,7 @@ title: State-Bound UI Components
 permalink: /codegen-process-guide/ux/state-bound-components
 parent: CodeBot UX
 grand_parent: CodeBot Guide
-nav_order: 7
+nav_order: 8
 ---
 
 # State-Bound UI Components
@@ -41,5 +41,4 @@ Invoices Table -> Invoice (data object) -> Invoice.amount
 
 If a source component only holds one value - e.g. a text field where the user edits the amount - then its state consists only of that one value, not the whole object. So in this case, the third part (attribute name) isn't used.
 
-
-> **[> Next: Join the dots](navigation)**
+> **[> Next: Secure your web application](web-security)**

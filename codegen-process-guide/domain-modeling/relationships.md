@@ -4,16 +4,20 @@ title: Relationships
 permalink: /codegen-process-guide/domain-modeling/relationships
 parent: Domain Modeling
 grand_parent: CodeBot Guide
-nav_order: 3
+nav_order: 4
 ---
 
 # Connect the domain classes using UML relationships
 
-The LBA domain model diagram shows different types of relationships - e.g:
+If we return to the "full-on" domain model diagram for a moment, you can see that it includes various types of relationships:
 
-* Aggregation relationship between `PaymentHistory` and `PaymentTransaction` which tells us that a single instance of `PaymentHistory` has 0 or more `PaymentTransactions` within them
-* Association relationship between `Subscription` and `CouponBlock` which implies that a single `Subscription` has 1 or more `CouponBlock` associated with it. Association creates PK FK relationship in the DB schema between the 2 entities
-* Inheritance/Generalization relationship between `PaymentMethod`, `WalletPayment` and `CardPayment` where `PaymentMethod` is the superclass (its attributes and operations) being inherited by subclasses: `WalletPayment` and `CardPayment`
+![LBA domain model diagram](../../images/lba/domain-model.png "LBA domain model diagram")
+
+For example:
+
+* Aggregation relationship between `Payment History` and `Payment Transaction` which tells us that a single instance of `Payment History` has 0 or more `Payment Transactions` within them
+* Association relationship between `Subscription` and `Coupon Block` which implies that a single `Subscription` has 1 or more `Coupon Block` associated with it. Association creates PK FK relationship in the DB schema between the 2 entities
+* Inheritance/Generalization relationship between `Payment Method`, `Wallet Payment` and `Card Payment` where `Payment Method` is the superclass (its attributes and operations) being inherited by subclasses: `Wallet Payment` and `Card Payment`
 
 
 ## Multiplicity
