@@ -48,4 +48,4 @@ There are actually two "update"-type operations:
 These database access functions can be accessed by screens/web pages generated from wireframes. Linkages between screens and database access functions are specified using UML tagged values.
 
 
-> **[> Next: CodeBot UX - draw wireframes and generate a React web-app](../UX/)**
+> **[> Next: CodeBot UX - draw wireframes and generate a React web-app](../ux)**
