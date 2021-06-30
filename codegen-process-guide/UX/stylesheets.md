@@ -31,10 +31,7 @@ CodeBot generates React.js pages; more specifically, it generates [React Bootstr
 
 Bootstrap includes CSS classes and style variants for headings, buttons, alerts etc; in fact for all component types.
 
-So (as you saw on the previous page) you can turn a label into a heading by 
-
 CodeBot provides some additional styling in a default stylesheet, which you can find in the generated app as `index.css`.
-
 
 **When we add support for additional target platforms such as Flutter (for desktop/mobile apps), we'll include an automatic mapping from the Bootstrap class and variant names to the target platform styles, so the wireframes shouldn't need to be modified at all.**
 
