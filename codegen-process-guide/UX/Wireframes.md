@@ -23,11 +23,11 @@ When you create the wireframe (whether via the Project Browser or as a sub-diagr
 
 With EA, CodeBot looks specifically for the `Webpage Wireframe` diagram type (on the right), located beneath `Wireframing` (on the left). Support for other wireframe types will be added at some point, but currently the diagram type must be Webpage Wireframe. (For MagicDraw, choose `User Interface Modeling Diagram`).
 
-## Create a panel to contain the page
+## Create a container for the entire page
 
-The screen/page must always be contained within an outer panel. For EA, the component type must always be a `Client Area` (shown in the screenshot below); for MagicDraw it must always be `Panel`.
+The screen/page must always be placed within an outer container. For EA, the component type must always be a `Client Area` (shown in the screenshot below); for MagicDraw it must always be `Panel`.
 
-NB: This restriction will go away very soon, and you'll be able to use any container component you like. For the time being though, it's just Client Area/Panel.
+NB: This restriction will go away very soon, and you'll be able to use any container component you like. For the time being though, it's just `Client Area`/`Panel`.
 
 ## Lay out the components
 
@@ -39,17 +39,17 @@ To solve this, CodeBot has an inbuilt "layout interpreter" which watches for typ
 
 **If your wireframe design follows well-established visual design conventions, you'll generally get better results.**
 
-Layouts can be hierarchical. Use a `Client Area`/`Panel` to group components together. Within each panel, the layout "resets", i.e. it's independent of any parent layout.
+Layouts can be hierarchical. Use a container (`Client Area`/`Panel`) to group components together. Within each container, the layout "resets", i.e. it's independent of any parent layout.
 
-Panels can also be nested inside other panels. Using this approach, you can successfully design some quite complex layouts which will translate well to the generated UI.
+Containers can also be nested inside other containers. Using this approach, you can successfully design some quite complex layouts which will translate well to the generated UI.
 
-For example, the above screenshot shows 3 panels inside the "main" outer panel, plus individual components (the page title and the Register button) which can exist alongside panels.
+For example, the above screenshot shows 3 containers inside the "main" outer container, plus individual components (the page title and the Register button) which can exist alongside containers.
 
 To show another layout example, the following wireframe...
 
-![Nested panels](../../images/lba/store-details.png "Nested panels")
+![Nested containers](../../images/lba/store-details.png "Nested containers")
 
-... uses nested panels to define a more complex layout. The `Store` and `Store Manager` groups are both contained inside a panel, which in turn is contained within the main outer panel. As you can see, the gridlike row/column layout is maintained independently inside each panel.
+... uses nested containers to define a more complex layout. The `Store` and `Store Manager` groups are both contained inside a container, which in turn is contained within the main outer container. As you can see, the gridlike row/column layout is maintained independently inside each container.
 
 
 You can find a full set of supported [UI components](../../codebot-reference/ui-components) in the [Reference](../../codebot-reference) section.
