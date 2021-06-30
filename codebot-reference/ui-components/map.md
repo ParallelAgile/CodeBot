@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Map Component
+title: Map
 permalink: /codebot-reference/ui-components/map
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 1
+nav_order: 11
 ---
 
-# Reference - Map Component
+# UI Component Reference: Map
 
-`Map` components can be used as a "single selection" map picker (i.e. choose a location), or to show data-bound *map markers* (or as both - it's possible to pick an individual location, while also showing map markers that can be clicked on). In the latter case (with map markers), think of the map component as a kind of graphical `ListBox` - it's showing a selection of data items just like a list, where each item can generate an "item selected" event.
+`Map` components can be used as a "single selection" map picker (i.e. choose a location), or to show data-linked *map markers* (or as both - it's possible to pick an individual location, while also showing map markers that can be clicked on). In the latter case (with map markers), think of the map component as a kind of graphical `ListBox` - it's showing a selection of data items just like a list, where each item can generate an "item selected" event.
 
 For React apps, CodeBot uses [React Leaflet](https://react-leaflet.js.org/), which is a React wrapper around [Leaflet](https://leafletjs.com/). The map is contained in `components/CbMap.ts` ("codebot map").
 
@@ -24,7 +24,7 @@ To add a map to the wireframe, in EA:
 > In determining the component type, CodeBot will give preference to `Map` over `Image`, but you might want to delete the `WireframeImage` stereotype anyway, so it doesn't look like an image component in the wireframe.
 
 
-## Using the map in a data-bound form
+## Using the map in a data-linked form
 
 When configured to be a "map picker", a map can be used like any other text input control in a form. As with other components, either:
 
@@ -48,10 +48,11 @@ The `Map` component is primarily configured through the following tagged values:
 | ------------- | ----------------- | ------------- | ------------------------------ |
 | `single selection` | `true` or `false` | In a form, default is true, otherwise false. | If true, this is a map picker where you select a single location. |
 | `popup message`    | Any text |         | If this is a map picker, an optional message to display in a popup when you click the selection marker. |
-| `origin`           | latitude,longitude string with no spaces, e.g. `25.07037114164013,-77.39571860092475` | `51.505,-0.09` (Central London) | The map's default location, if no other location is given (e.g. data-bound, or reacting to the value in some other component). |
+| `origin`           | latitude,longitude string with no spaces, e.g. `25.07037114164013,-77.39571860092475` | `51.505,-0.09` (Central London) | The map's default location, if no other location is given (e.g. data-linked, or reacting to the value in some other component). |
 | `zoom`             | Integer  | `12`         | The initial zoom level |
 | `width`            | any valid CSS size e.g. `50%`, `150px`  | `50rem` | Leaflet needs the component size to be set when it's created, so width and height tags are provided to enable that. |
 | `height`           | any valid CSS size      | `40rem`  | |
+| `marker location attribute` | domain attribute name | `location`  | When the map is linked to a domain class (to display multiple map markers), this is the attribute on the linked domain class containing the "latitude,longitude" string value. The marker will be placed at this location. |
 | `scroll wheel zoom` | `true` or `false` | `false` | Whether the map can be zoomed in or out with the mouse scroll-wheel. |
 | `css class`        | Any CSS class name, without a preceding `.`  |  | |
 | `tile layer`       | A URL that follows Leaflet's [tile URL format](https://leafletjs.com/reference-1.7.1.html#tilelayer) | An openstreetmap layer  | In addition to "everyday" street maps, Leaflet can be extended with third-party tile layers, e.g. satellite or topological views. This tag allows you to specify the main tile layer for the map. |

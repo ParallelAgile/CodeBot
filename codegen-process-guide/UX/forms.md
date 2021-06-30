@@ -107,4 +107,4 @@ For the `country` attribute, we've used a `ComboBox` component. Because `country
 
 
 
-> **[> Next: Data-bound UI components](data-bound-components)**
+> **[> Next: Data-linked UI components](data-linked-components)**

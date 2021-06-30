@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Server-Side Events
-permalink: /codebot-reference/relationship-types
+permalink: /codebot-reference/server-side-events
 parent: CodeBot Reference
 nav_order: 4
 ---
