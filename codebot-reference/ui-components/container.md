@@ -20,3 +20,4 @@ Page will be added very soon...
 
 ## Tagged values
 
+[Common tagged values](../tagged-values)

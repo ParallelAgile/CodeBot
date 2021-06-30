@@ -24,3 +24,6 @@ Some of these tags are based on Bootstrap values. For more info: https://react-b
 | Tag      | Values                                            | Notes              |
 | ---------| ------------------------------------------------- | ------------------ |
 | `size`   | `sm`                    | Cuts the table row spacing in half |
+
+
+[Common tagged values](../tagged-values)

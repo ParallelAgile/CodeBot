@@ -11,7 +11,7 @@ nav_order: 1
 
 The `label` component is quite versatile. It can be used as a simple text prompt ("Enter your name" etc), for multi-line paragraphs, and for headings. The text can be static or made dynamic by linking it to a domain class & attribute or some other UI component.
 
-> To bind a label to a component or link it to a domain attribute, see [State-bound Components](../../codegen-process-guide/UX/state-bound-components) and [Data-linked Components](../../codegen-process-guide/UX/data-linked-components) in the tutorial.
+> To bind a label to a component or link it to a domain attribute, see [State-bound Components](../../codegen-process-guide/ux/state-bound-components) and [Data-linked Components](../../codegen-process-guide/ux/data-linked-components) in the tutorial.
 
 ## Creating a label
 
@@ -46,4 +46,5 @@ The `Label` component is primarily configured through the following tagged value
 | `css class`   | Any CSS class name, without a preceding `.`  |  | See the notes above about creating a heading or sub-heading. |
 | `variant`   | Any "standard" Bootstrap variant value - see Variant in the [Tagged Values reference](../tagged-values) |  | For React, this will turn the label into an "Alert" component, with a background and text colour matching the variant. Useful for callouts, notes and static warnings ("Clicking OK will delete all your data"). |
 
+[Common tagged values](../tagged-values) shared by most components.
 

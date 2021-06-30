@@ -19,3 +19,6 @@ Page will be added very soon...
 
 ## Tagged values
 
+This section will be added soon.
+
+[Common tagged values](../tagged-values)

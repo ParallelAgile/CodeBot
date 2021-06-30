@@ -11,7 +11,7 @@ nav_order: 10
 
 Page will be added very soon...
 
-Also see the [images](../../codegen-process-guide/UX/images) tutorial.
+Also see the [images](../../codegen-process-guide/ux/images) tutorial.
 
 ## Creating an Image
 
@@ -27,3 +27,4 @@ Some of these tags are based on Bootstrap values. For more info: https://react-b
 | `shape`  | One of: `rounded`, `roundedCircle`, `thumnbnail`  | Affects the image appearance |
 | `fluid`  | `true` (default) or `false`                       | Scales the image nicely to the parent element |
 
+[Common tagged values](../tagged-values)

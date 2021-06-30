@@ -60,6 +60,9 @@ The `Map` component is primarily configured through the following tagged values:
 
 > To choose a tile layer, we recommend [this resource](https://leaflet-extras.github.io/leaflet-providers/preview/).
 
+[Common tagged values](../tagged-values) shared by most components.
+
+
 ## UI Actions Triggered
 
 The following actions/events are triggered at run-time:
@@ -79,4 +82,4 @@ The following action/event types can be received by the map, by binding it to so
 | Value changed  | string | Moves the map to the new location. The bound value (emitted by the other component) should be a string representing "latitude,longitude". |
 
 
-To bind the map to a component (and vice versa), see [UI Component Binding](../ui-component-binding) (reference) and [State-bound Components](../../codegen-process-guide/UX/state-bound-components) (tutorial).
+To bind the map to a component (and vice versa), see [UI Component Binding](../ui-component-binding) (reference) and [State-bound Components](../../codegen-process-guide/ux/state-bound-components) (tutorial).

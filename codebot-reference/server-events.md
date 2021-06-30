@@ -63,7 +63,7 @@ The response will have a `400` status code.
 
 ## Return a JSON object
 
-To have more control over what's returned from the API, return a JSON object from the event handler, with the following structure:
+To have more control over the veto response, return a JSON object from the event handler, with the following structure:
 
 ```JavaScript
 (invoice, loggedInUser) => {
@@ -74,12 +74,12 @@ To have more control over what's returned from the API, return a JSON object fro
 }
 ```
 
-The message will be returned as a JSON object (as above), with a `500` response.
+The message will be returned as a JSON object (as in the previous example), with a `500` response.
 
 
 ## No veto
 
-To allow an operation to proceed without being vetoed, simply return nothing (i.e. `undefined`). Returning *any* value besides `undefined` will cause the operation to be aborted.
+To allow an operation to proceed without being vetoed, simply return nothing (i.e. `undefined`). Returning *any* value besides `undefined` will cause the operation to be vetoed.
 
 
 ## Combining veto responses
@@ -94,7 +94,6 @@ In the case where an operation involves multiple records (therefore potentially 
   ]
 }
 ```
-
 
 Additionally, the first occurring status code will be used, or the default `400` if none was specified.
 
