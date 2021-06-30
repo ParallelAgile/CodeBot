@@ -54,8 +54,8 @@ The `Map` component is primarily configured through the following tagged values:
 | `height`           | any valid CSS size      | `40rem`  | |
 | `scroll wheel zoom` | `true` or `false` | `false` | Whether the map can be zoomed in or out with the mouse scroll-wheel. |
 | `css class`        | Any CSS class name, without a preceding `.`  |  | |
-| `tile layer`       | A URL that follows Leaflet's tile URL format, e.g. `https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}`  | `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`  | In addition to "everyday" street maps, Leaflet can be extended with third-party tile layers, e.g. satellite or topological views. This tag allows you to specify the main tile layer for the map. |
-| `tile attribution` | Any text  | `&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors` | Attribution text that accompanies the tile layer. This text appears at the bottom-right of the map. |
+| `tile layer`       | A URL that follows Leaflet's [tile URL format](https://leafletjs.com/reference-1.7.1.html#tilelayer) | An openstreetmap layer  | In addition to "everyday" street maps, Leaflet can be extended with third-party tile layers, e.g. satellite or topological views. This tag allows you to specify the main tile layer for the map. |
+| `tile attribution` | Any text  | openstreetmap attribution | Attribution text that accompanies the tile layer. This text appears at the bottom-right of the map. |
 
 > To choose a tile layer, we recommend [this resource](https://leaflet-extras.github.io/leaflet-providers/preview/).
 
