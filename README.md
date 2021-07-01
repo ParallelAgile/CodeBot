@@ -22,13 +22,13 @@ Feedback is also welcome!  (Email us at support@parallelagile.com).
     ```
 
 * Run the following commands to setup your fork as a remote to push your work to. Replace {USERNAME} with your own
-github username. This default remote for the ParallelAgile is "origin'
+github username. The default remote for the ParallelAgile is "origin'
 
     ```
     $ git remote add fork https://github.com/{USERNAME}/CodeBot
     ```
 
-* Install [jekyll requirements](https://jekyllrb.com/docs/installation/#guides) based on your OS. 
+* Install [jekyll requirements](https://jekyllrb.com/docs/installation/#guides) based on your OS.
 
 
 ### Running Locally
