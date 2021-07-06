@@ -52,4 +52,4 @@ i.e. it's identical except for the "ui/" part.
 
 
 
-> **[> Next: Introducing our example project](../lba-example-project)**
+> **[> Next: Hello Codebot project](../hello-codebot-project)**

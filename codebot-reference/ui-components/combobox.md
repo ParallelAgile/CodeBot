@@ -4,7 +4,7 @@ title: Combo Box
 permalink: /codebot-reference/ui-components/combobox
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 7
+nav_order: 9
 ---
 
 # UI Component Reference: Combo Box (drop-down selector)

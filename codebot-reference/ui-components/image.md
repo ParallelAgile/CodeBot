@@ -4,7 +4,7 @@ title: Image
 permalink: /codebot-reference/ui-components/image
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 10
+nav_order: 11
 ---
 
 # UI Component Reference: Image

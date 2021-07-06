@@ -4,7 +4,7 @@ title: Map
 permalink: /codebot-reference/ui-components/map
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 11
+nav_order: 12
 ---
 
 # UI Component Reference: Map

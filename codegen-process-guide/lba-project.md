@@ -3,7 +3,7 @@ layout: page
 title: Example Project - LBA
 permalink: /codegen-process-guide/lba-example-project
 parent: CodeBot Guide
-nav_order: 2
+nav_order: 3
 ---
 
 # Example Project - LBA

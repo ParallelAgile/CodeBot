@@ -17,6 +17,9 @@ You can try out CodeBot for free, including the [cloud-based hosting](hosting). 
 
 Licensed users can create multiple projects - useful for things like deploying to a separate Dev or Test environment, in addition to a Production environment; or for maintaining multiple cloud-hosted versions of a proof-of-concept app.
 
+## Hello CodeBot
+
+At this stage, you may want to quickly try out a "hello world" example. We have just such a project at the ready. Follow the [Hello CodeBot](../hello-codebot-project) steps to try it out. The link at the end of that page returns here to resume the tutorial.
 
 ## Overview of the Web Console
 

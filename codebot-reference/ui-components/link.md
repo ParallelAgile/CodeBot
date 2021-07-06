@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Checkbox
-permalink: /codebot-reference/ui-components/checkbox
+title: Link
+permalink: /codebot-reference/ui-components/link
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 7
+nav_order: 6
 ---
 
-# UI Component Reference: Checkbox
+# UI Component Reference: Link
 
 Page will be added very soon...
 
 
-## Creating a checkbox
+## Creating a link
 
 
 

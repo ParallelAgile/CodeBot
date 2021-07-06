@@ -15,7 +15,7 @@ As your project progresses, and based on feedback from this early prototype, you
 
 
 
-In this guide we're following an example project, a [Location Based Advertising](../lba-example-project) (LBA) system. Using LBA, advertisers can publish offers (which contain coupons) to the cloud, and a location-aware mobile app can receive and redeem the coupons.
+In this guide we're following an example project, a [Location Based Advertising](../lba-project) (LBA) system. Using LBA, advertisers can publish offers (which contain coupons) to the cloud, and a location-aware mobile app can receive and redeem the coupons.
 
 Advertisers pre-purchase blocks of coupons by subscription. When the advertiser has no more coupons available the mobile app will not receive the coupons.
 
