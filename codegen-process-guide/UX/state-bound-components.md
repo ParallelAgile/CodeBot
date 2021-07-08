@@ -46,4 +46,9 @@ Invoices Table -> Invoice (data object) -> Invoice.amount
 
 If a source component only holds one value - e.g. a text field where the user edits the amount - then its state consists only of that one value, not the whole object. So in this case, the third part (attribute name) isn't used.
 
+
+## For more info...
+
+You can find comprehensive details about [component binding](../../codebot-reference/ui-state-bound-components) in the [reference section](../../codebot-reference/).
+
 > **[> Next: Secure your web application](web-security)**
