@@ -12,9 +12,18 @@ nav_order: 2
 
 *Hello CodeBot* is a straightforward example project which should quickly provide you with a good idea of what CodeBot can do, given even a quite minimal input model.
 
-To try *Hello CodeBot*, you'll first need to have [created an account with us](https://parallelagile.net/) (a free trial is available) and logged in.
+To try *Hello CodeBot*, you'll first need to have [created an account with us](https://parallelagile.net/) and logged in.
 
 > You can find more ["getting started" details](getting-started/) in this tutorial, though you shouldn't need *everything* described there in order to try out this example.
+
+
+## If you don't yet have a CodeBot account...
+
+If you just want to see an example of what CodeBot can do, [here's the complete generated zipfile](../images/hello-codebot/hello.zip)... you'll be able to download this to your PC and run the complete software stack locally. (To run it, you'll need Node/NPM, and access to a MongoDB database - check the README.md file in the zip).
+
+Also, *spoiler alert*... here's the React web-app [already generated and online](https://parallelagile.net/ui/hosted/matt/hello/Login) with its own REST API and Mongo database. It was deployed via our "one-click generate model, build and deploy" hosting service. Feel free to register a user, login and watch videos on the "home" page!
+
+But for a quick run-through of how to generate the project for yourself, read on...
 
 ## Download the EA Model and/or XMI file
 
@@ -24,12 +33,18 @@ Alternatively, here's [the same model exported](../images/hello-codebot/HelloCod
 
 > You may need to right-click and "save as..." so that the browser doesn't just display the XML contents.
 
+The model is worth exploring, as - in addition to being a quick "how-to" guide - it also adheres to the recommended CodeBot [UX modeling best practices](../articles/ux_modeling_tips).
+
+## Generate the application
+
 Now that you have the model, you're ready to run CodeBot and try out the generated application. There are two approaches:
 
-1. Use [Enterprise Architect](https://sparxsystems.com/) and our [EA add-in](https://parallelagile.net/EA)
-2. Upload the XMI file to the CodeBot web console
+1. Run CodeBot via [Enterprise Architect](https://sparxsystems.com/) and our [EA add-in](https://parallelagile.net/EA)
+2. ... or, upload the XMI file to the CodeBot web console
 
-## 1. Run CodeBot via the EA add-in
+In more detail:
+
+### 1. Run CodeBot via Enterprise Architect and our EA add-in
 
 The easiest way to try the project out - assuming you have both Enterprise Architect and our EA add-in installed - is to generate the application directly from the model.
 
@@ -37,9 +52,9 @@ First double-click the "eapx" file to load the project into EA. Have a look at t
 
 When you're ready, right-click on the root "Model" package in the Package Browser, and choose `Specialize` > `Parallel Agile` > `Generate Project`.
 
-## 2. ... or, upload the file into the web console
+### 2. ... or, upload the XMI file to the CodeBot web console
 
-If you don't have either EA or the add-in installed, it's also possible to generate the whole system via the [CodeBot web console](https://parallelagile.net/), using the already-exported XMI file.
+If you don't have either EA or the add-in installed, you can still generate the whole system via the [CodeBot web console](https://parallelagile.net/), using the already-exported XMI file. (Download link above...)
 
 ## Try it out!
 
@@ -96,6 +111,8 @@ There are other ways to bring in custom files e.g. load CSS or images via extern
 Creating a full-stack application using CodeBot really is as straightforward as that! No coding required... although CodeBot doesn't shy away from non-trivial applications requiring complex "business logic" code, either.
 
 To illustrate the potential, we've included a working JavaScript code fragment in the model. This code is injected into the REST API and is triggered to run during certain [server-side events](advanced/server-event-handlers). We'll explore what the code does in a follow-up article.
+
+You can also read this [in-depth exploration of Hello CodeBot](https://medium.com/parallel-agile-blog/tutorial-hello-codebot-a-simple-secure-rich-media-low-code-application-2229a4296ea7).
 
 Please do give *Hello CodeBot* a try. If you encounter any problems getting it running, email us at support@parallelagile.com, and we'll do our best to help out.
 
