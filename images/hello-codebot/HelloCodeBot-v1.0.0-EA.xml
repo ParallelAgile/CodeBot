@@ -89,7 +89,7 @@
 							<transition xmi:type="uml:Transition" xmi:id="EAID_A443F0FC_6D97_4cd9_A19C_1CCCC5BE7913" visibility="public" kind="local" source="EAID_B3F50CC3_14BE_4297_AF6C_7568F07F6C8B" target="EAID_E3B3FFC7_E930_49f3_826E_0705D94FFFA1">
 								<trigger xmi:idref="EAID_81A3210D_0AFF_4e26_A476_4E4F21B77ECD"/>
 							</transition>
-							<subvertex xmi:type="uml:Pseudostate" xmi:id="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" name="Initial" visibility="public" kind="initial">
+							<subvertex xmi:type="uml:Pseudostate" xmi:id="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" visibility="public" kind="initial">
 								<outgoing xmi:idref="EAID_DE35B70B_3FD1_4344_905E_85A04AA4C122"/>
 							</subvertex>
 							<transition xmi:type="uml:Transition" xmi:id="EAID_DE35B70B_3FD1_4344_905E_85A04AA4C122" visibility="public" kind="local" source="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" target="EAID_E3B3FFC7_E930_49f3_826E_0705D94FFFA1"/>
@@ -110,15 +110,15 @@
 				</packagedElement>
 				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" name="Wireframes" visibility="public">
 					<packagedElement xmi:type="uml:Class" xmi:id="EAID_89746748_DD73_4197_993C_686A30809515" name="Home Page" visibility="public">
-						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" name="ClientArea" visibility="public">
-							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" name="Learn About the CodeBot, Luke" visibility="public"/>
-							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" name="zefram" visibility="public"/>
-						</nestedClassifier>
+						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" name="Choose a Video" visibility="public"/>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" name="Logout" visibility="public"/>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" name="Navigation Area" visibility="public">
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" name="I want my own CodeBot NOW!" visibility="public"/>
 						</nestedClassifier>
-						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" name="Choose a Video" visibility="public"/>
+						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" name="Page Header" visibility="public">
+							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" name="Learn About the CodeBot, Luke" visibility="public"/>
+							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" name="zefram" visibility="public"/>
+						</nestedClassifier>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" name="VideoPlayer" visibility="public"/>
 					</packagedElement>
 					<packagedElement xmi:type="uml:Dependency" xmi:id="EAID_85FF292B_A7EA_4156_9A8A_9D6E4AACD95E" name="name" visibility="public" supplier="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5" client="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
@@ -146,7 +146,7 @@
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_3066E6E1_2512_4020_BD0F_880E8F8132FB" name="Back to Login" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_51015F91_CC0F_4d7c_8A7C_E78258C8AC27" name="Already registered?" visibility="public"/>
 						</nestedClassifier>
-						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_1171B871_D55F_46e4_856B_68E5D3300874" name="ClientArea" visibility="public">
+						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_1171B871_D55F_46e4_856B_68E5D3300874" name="Register form" visibility="public">
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" name="Register" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_1363724E_0DAC_4a46_B0F1_68D6594799B3" name="password" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_7A130428_6C24_40db_8F57_0E0131AAF281" name="Password" visibility="public"/>
@@ -172,22 +172,22 @@
 		<thecustomprofile:precedes base_Dependency="EAID_4106C41F_0DB1_4bf3_99CC_D120AEC44784"/>
 		<thecustomprofile:TOGAF__Invokes base_Dependency="EAID_E8D0CB2A_90B2_4913_98E9_14B65B31F424" __EAStereoName="TOGAF::Invokes"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_89746748_DD73_4197_993C_686A30809515" BorderStyle="Solid"/>
+		<Wireframing:WireframeCombobox base_Class="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" Items="Value1" DropDownState="Closed"/>
+		<thecustomprofile:action base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" action="logout"/>
+		<thecustomprofile:variant base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" variant="link"/>
+		<thecustomprofile:css_class base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" __EAStereoName="css class" css_class="logout"/>
+		<Wireframing:WireframeButton base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" State="Normal"/>
+		<Wireframing:WireframeClientArea base_Class="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" BorderStyle="Solid"/>
+		<thecustomprofile:variant_css_class base_Class="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" __EAStereoName="variant css class" variant_css_class="wantCodeBotContainer"/>
+		<thecustomprofile:url base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" url="https://parallelagile.net/BuyNow"/>
+		<thecustomprofile:css_class base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" __EAStereoName="css class" css_class="BuyCodeBot pulsingButton"/>
+		<Wireframing:WireframeHyperlink base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" State="Link" Properties="&lt;StyleList&gt;&#xA;	&lt;Style Name=&quot;Link&quot; CSS=&quot;text-decoration:underline;font-family:Arial;color:#FFFFFF;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Visited&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#404040;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Hover&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#808080;&quot;/&gt;&#xA;&lt;/StyleList&gt;&#xA;"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" BorderStyle="Solid"/>
 		<thecustomprofile:variant base_Class="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" variant="primary"/>
 		<Wireframing:WireframeLabel base_Class="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" Multiline="false" Align_Text="Center"/>
 		<thecustomprofile:css_class base_Class="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" __EAStereoName="css class" css_class="h1 titleNextToImage"/>
 		<Wireframing:WireframeImage base_Class="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD"/>
 		<thecustomprofile:fluid base_Class="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" fluid="false"/>
-		<thecustomprofile:action base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" action="logout"/>
-		<thecustomprofile:variant base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" variant="link"/>
-		<thecustomprofile:css_class base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" __EAStereoName="css class" css_class="logout"/>
-		<Wireframing:WireframeButton base_Class="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" State="Normal"/>
-		<thecustomprofile:alert_css_class base_Class="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" __EAStereoName="alert css class" alert_css_class="wantCodeBotContainer"/>
-		<Wireframing:WireframeClientArea base_Class="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" BorderStyle="Solid"/>
-		<thecustomprofile:url base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" url="https://parallelagile.net/BuyNow"/>
-		<thecustomprofile:css_class base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" __EAStereoName="css class" css_class="BuyCodeBot pulsingButton"/>
-		<Wireframing:WireframeHyperlink base_Class="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" State="Link" Properties="&lt;StyleList&gt;&#xA;	&lt;Style Name=&quot;Link&quot; CSS=&quot;text-decoration:underline;font-family:Arial;color:#FFFFFF;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Visited&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#404040;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Hover&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#808080;&quot;/&gt;&#xA;&lt;/StyleList&gt;&#xA;"/>
-		<Wireframing:WireframeCombobox base_Class="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" Items="Value1" DropDownState="Closed"/>
 		<thecustomprofile:url base_Class="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" url="https://youtu.be/ZUm6esxrua8"/>
 		<Wireframing:WireframeVideoPlayer base_Class="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_56D7335D_A055_42fd_ACCB_A1FA74FECEBD" BorderStyle="Solid"/>
@@ -619,10 +619,10 @@
 					<StateFlow xmi:id="EAID_3715D6B1_A63E_4e90_B3C4_BD6236AFCDF7" start="EAID_E3B3FFC7_E930_49f3_826E_0705D94FFFA1" end="EAID_B3F50CC3_14BE_4297_AF6C_7568F07F6C8B"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" xmi:type="uml:StateNode" name="Initial" scope="public">
+			<element xmi:idref="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" xmi:type="uml:StateNode" scope="public">
 				<model package="EAPK_A2DAAD0A_DD64_4389_9CE9_8570378C2BDB" tpos="0" ea_localid="20" ea_eleType="element"/>
 				<properties isSpecification="false" sType="StateNode" nType="3" scope="public"/>
-				<project author="dougimac" version="1.0" phase="1.0" created="2021-06-30 17:00:36" modified="2021-07-04 18:23:43" complexity="1" status="Proposed"/>
+				<project author="dougimac" version="1.0" phase="1.0" created="2021-06-30 17:00:36" modified="2021-07-19 12:52:30" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
@@ -700,10 +700,72 @@
 				<xrefs value="$XREFPROP=$XID={9DBFA1FB-748C-4215-B04B-59DAC51D7349}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeClientArea;FQName=Wireframing::WireframeClientArea;@ENDSTEREO;$DES;$CLT={89746748-DD73-4197-993C-686A30809515}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
-			<element xmi:idref="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" xmi:type="uml:GUIElement" name="ClientArea" scope="public">
+			<element xmi:idref="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" xmi:type="uml:GUIElement" name="Choose a Video" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="28" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeCombobox"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 17:42:20" modified="2021-07-05 15:29:53" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_27C4CFEE_26AC_bd26_BE87_B615A5CF6CD4" name="DropDownState" value="Closed#NOTES#Values: Open,Closed&#xA;Default: Closed&#xA;" modelElement="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
+					<tag xmi:id="EAID_07AD6502_CE00_16ce_837D_C8A512B5779F" name="Items" value="Value1#NOTES#Values: Value1,Value2,Value3&#xA;Default: Value1&#xA;" modelElement="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={96A8F2C1-D04B-4595-91B1-947FE90CD3BA}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeCombobox;FQName=Wireframing::WireframeCombobox;@ENDSTEREO;$DES;$CLT={7DD61A98-903B-491d-89C3-11DB2D09EDF5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+				<links>
+					<Dependency xmi:id="EAID_85FF292B_A7EA_4156_9A8A_9D6E4AACD95E" start="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" end="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5"/>
+					<Dependency xmi:id="EAID_39F7877A_729F_4dc8_9225_DE0DD2AE4B88" start="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" end="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" xmi:type="uml:GUIElement" name="Logout" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="67" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeButton"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 17:16:45" modified="2021-07-06 11:41:57" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_01097E6C_52C4_4b3f_A650_263E5B4B6C92" name="action" value="logout" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
+					<tag xmi:id="EAID_AC515523_0610_498a_857A_93B8A4DDEC00" name="css class" value="logout" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
+					<tag xmi:id="EAID_086249E1_57A2_8957_8D32_5B7BABB7960F" name="State" value="Normal#NOTES#Values: Normal,Focused,Selected,Disabled&#xA;Default: Normal&#xA;" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
+					<tag xmi:id="EAID_AC57C9F9_674F_4da3_A614_C0B965F4E9D2" name="variant" value="link" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={FF00EFC1-A7A6-4882-B821-8F9D0EFCC448}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeButton;FQName=Wireframing::WireframeButton;@ENDSTEREO;$DES;$CLT={A110B724-DA8F-40ef-A2C7-EA8633672FB4}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+			</element>
+			<element xmi:idref="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" xmi:type="uml:GUIElement" name="Navigation Area" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="57" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeClientArea"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 15:29:17" modified="2021-07-05 15:30:18" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_683C894F_502C_0c50_832C_92C39969A116" name="BorderStyle" value="Solid#NOTES#Values: Solid,Dashed,None&#xA;Default: Solid&#xA;" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
+					<tag xmi:id="EAID_7676EC4C_5789_dc57_A020_54360CFCECA4" name="ScrollbarH" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
+					<tag xmi:id="EAID_7676EC5A_5797_dc57_8F4F_220C0641BD4E" name="ScrollbarV" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
+					<tag xmi:id="EAID_A00D126D_560F_4a71_89EF_9922EFA7849D" name="variant css class" value="wantCodeBotContainer" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={D62F0E0F-0EFB-4ad4-AA73-B10B3FDA325C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeClientArea;FQName=Wireframing::WireframeClientArea;@ENDSTEREO;$DES;$CLT={AB1CEAF8-8C67-4bed-B0BF-670BC0B0BE02}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+			</element>
+			<element xmi:idref="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" xmi:type="uml:GUIElement" name="I want my own CodeBot NOW!" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" tpos="0" ea_localid="72" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeHyperlink"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 10:23:37" modified="2021-07-06 10:52:47" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_CA18DA64_1EF1_4d2d_BBD0_834600B7E503" name="css class" value="BuyCodeBot pulsingButton" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
+					<tag xmi:id="EAID_B5F90BED_BD48_9bbd_8743_454A8271B0A2" name="Properties" value="&lt;memo&gt;#NOTES#&lt;StyleList&gt;&#xA;	&lt;Style Name=&quot;Link&quot; CSS=&quot;text-decoration:underline;font-family:Arial;color:#FFFFFF;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Visited&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#404040;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Hover&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#808080;&quot;/&gt;&#xA;&lt;/StyleList&gt;&#xA;" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
+					<tag xmi:id="EAID_086249E1_F65C_4ef6_AFD2_DB5642EC0498" name="State" value="Link#NOTES#Values:Link,Visited,Hover" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
+					<tag xmi:id="EAID_3DA6EB12_DFB8_402a_B9D2_4693CD5C1AF5" name="url" value="https://parallelagile.net/BuyNow" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={AA59170D-FCCE-4d32-9B38-C3D0E7613363}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeHyperlink;FQName=Wireframing::WireframeHyperlink;@ENDSTEREO;$DES;$CLT={CB4123AB-ACDF-443b-BDF9-8D58B97E1534}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+			</element>
+			<element xmi:idref="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" xmi:type="uml:GUIElement" name="Page Header" scope="public">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="69" ea_eleType="element"/>
 				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeClientArea"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 17:23:22" modified="2021-07-05 17:23:22" complexity="1" status="Proposed"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 17:23:22" modified="2021-07-19 12:21:56" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
@@ -740,68 +802,6 @@
 				</tags>
 				<xrefs value="$XREFPROP=$XID={0A16BDC3-522B-4402-8314-95572F448CBF}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeImage;FQName=Wireframing::WireframeImage;@ENDSTEREO;$DES;$CLT={F71D69EF-00F5-4cd8-B486-11835EF286BD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
-			<element xmi:idref="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" xmi:type="uml:GUIElement" name="Logout" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="67" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeButton"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 17:16:45" modified="2021-07-06 11:41:57" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_01097E6C_52C4_4b3f_A650_263E5B4B6C92" name="action" value="logout" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
-					<tag xmi:id="EAID_AC515523_0610_498a_857A_93B8A4DDEC00" name="css class" value="logout" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
-					<tag xmi:id="EAID_086249E1_57A2_8957_8D32_5B7BABB7960F" name="State" value="Normal#NOTES#Values: Normal,Focused,Selected,Disabled&#xA;Default: Normal&#xA;" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
-					<tag xmi:id="EAID_AC57C9F9_674F_4da3_A614_C0B965F4E9D2" name="variant" value="link" modelElement="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={FF00EFC1-A7A6-4882-B821-8F9D0EFCC448}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeButton;FQName=Wireframing::WireframeButton;@ENDSTEREO;$DES;$CLT={A110B724-DA8F-40ef-A2C7-EA8633672FB4}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
-			<element xmi:idref="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" xmi:type="uml:GUIElement" name="Navigation Area" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="57" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeClientArea"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-05 15:29:17" modified="2021-07-05 15:30:18" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_3819AE15_3BBF_4945_A6DE_76DB56E62BA4" name="alert css class" value="wantCodeBotContainer" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
-					<tag xmi:id="EAID_683C894F_502C_0c50_832C_92C39969A116" name="BorderStyle" value="Solid#NOTES#Values: Solid,Dashed,None&#xA;Default: Solid&#xA;" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
-					<tag xmi:id="EAID_7676EC4C_5789_dc57_A020_54360CFCECA4" name="ScrollbarH" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
-					<tag xmi:id="EAID_7676EC5A_5797_dc57_8F4F_220C0641BD4E" name="ScrollbarV" modelElement="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={D62F0E0F-0EFB-4ad4-AA73-B10B3FDA325C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeClientArea;FQName=Wireframing::WireframeClientArea;@ENDSTEREO;$DES;$CLT={AB1CEAF8-8C67-4bed-B0BF-670BC0B0BE02}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
-			<element xmi:idref="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" xmi:type="uml:GUIElement" name="I want my own CodeBot NOW!" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" tpos="0" ea_localid="72" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeHyperlink"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 10:23:37" modified="2021-07-06 10:52:47" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_CA18DA64_1EF1_4d2d_BBD0_834600B7E503" name="css class" value="BuyCodeBot pulsingButton" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
-					<tag xmi:id="EAID_B5F90BED_BD48_9bbd_8743_454A8271B0A2" name="Properties" value="&lt;memo&gt;#NOTES#&lt;StyleList&gt;&#xA;	&lt;Style Name=&quot;Link&quot; CSS=&quot;text-decoration:underline;font-family:Arial;color:#FFFFFF;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Visited&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#404040;&quot;/&gt;&#xA;	&lt;Style Name=&quot;Hover&quot; CSS=&quot;font-size:8px;text-decoration:underline;font-family:Arial;color:#808080;&quot;/&gt;&#xA;&lt;/StyleList&gt;&#xA;" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
-					<tag xmi:id="EAID_086249E1_F65C_4ef6_AFD2_DB5642EC0498" name="State" value="Link#NOTES#Values:Link,Visited,Hover" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
-					<tag xmi:id="EAID_3DA6EB12_DFB8_402a_B9D2_4693CD5C1AF5" name="url" value="https://parallelagile.net/BuyNow" modelElement="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={AA59170D-FCCE-4d32-9B38-C3D0E7613363}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeHyperlink;FQName=Wireframing::WireframeHyperlink;@ENDSTEREO;$DES;$CLT={CB4123AB-ACDF-443b-BDF9-8D58B97E1534}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
-			<element xmi:idref="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" xmi:type="uml:GUIElement" name="Choose a Video" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="28" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeCombobox"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 17:42:20" modified="2021-07-05 15:29:53" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_27C4CFEE_26AC_bd26_BE87_B615A5CF6CD4" name="DropDownState" value="Closed#NOTES#Values: Open,Closed&#xA;Default: Closed&#xA;" modelElement="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
-					<tag xmi:id="EAID_07AD6502_CE00_16ce_837D_C8A512B5779F" name="Items" value="Value1#NOTES#Values: Value1,Value2,Value3&#xA;Default: Value1&#xA;" modelElement="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={96A8F2C1-D04B-4595-91B1-947FE90CD3BA}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeCombobox;FQName=Wireframing::WireframeCombobox;@ENDSTEREO;$DES;$CLT={7DD61A98-903B-491d-89C3-11DB2D09EDF5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-				<links>
-					<Dependency xmi:id="EAID_85FF292B_A7EA_4156_9A8A_9D6E4AACD95E" start="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" end="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5"/>
-					<Dependency xmi:id="EAID_39F7877A_729F_4dc8_9225_DE0DD2AE4B88" start="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" end="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5"/>
-				</links>
 			</element>
 			<element xmi:idref="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" xmi:type="uml:GUIElement" name="VideoPlayer" scope="public">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="27" ea_eleType="element"/>
@@ -1063,10 +1063,10 @@
 				<xrefs value="$XREFPROP=$XID={C8294EEB-578E-4860-B6B2-298F0315EDD2}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={51015F91-CC0F-4d7c-8A7C-E78258C8AC27}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
-			<element xmi:idref="EAID_1171B871_D55F_46e4_856B_68E5D3300874" xmi:type="uml:GUIElement" name="ClientArea" scope="public">
+			<element xmi:idref="EAID_1171B871_D55F_46e4_856B_68E5D3300874" xmi:type="uml:GUIElement" name="Register form" scope="public">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_27CBD4BC_3E27_4cd2_98C4_7266C701643F" tpos="0" ea_localid="46" ea_eleType="element"/>
 				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeClientArea"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 18:25:37" modified="2021-07-04 18:25:37" complexity="1" status="Proposed"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 18:25:37" modified="2021-07-17 12:50:58" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
@@ -5287,7 +5287,7 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 		<connectors>
 			<connector xmi:idref="EAID_9A35E0E6_C5C9_46a5_BA92_55911D2B1039">
 				<source xmi:idref="EAID_1171B871_D55F_46e4_856B_68E5D3300874">
-					<model ea_localid="46" type="GUIElement" name="ClientArea"/>
+					<model ea_localid="46" type="GUIElement" name="Register form"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -5584,7 +5584,7 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 			</connector>
 			<connector xmi:idref="EAID_DE35B70B_3FD1_4344_905E_85A04AA4C122">
 				<source xmi:idref="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34">
-					<model ea_localid="20" type="StateNode" name="Initial"/>
+					<model ea_localid="20" type="StateNode"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -5677,6 +5677,17 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 				<packagedElement xmi:type="uml:Extension" xmi:id="Class_action" name="A_Class_action" memberEnd="extension_action action-base_Class">
 					<ownedEnd xmi:id="extension_action" name="extension_action" type="action" isComposite="true" lower="0" upper="1" memberEnd="extension_action action-base_Class"/>
 				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="variant css class" name="variant css class">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="variant css class-base_Class" name="base_Class" association="Class_variant css class">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="variant css class-variant css class" name="variant css class">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_variant css class" name="A_Class_variant css class" memberEnd="extension_variant css class variant css class-base_Class">
+					<ownedEnd xmi:id="extension_variant css class" name="extension_variant css class" type="variant css class" isComposite="true" lower="0" upper="1" memberEnd="extension_variant css class variant css class-base_Class"/>
+				</packagedElement>
 				<packagedElement xmi:type="uml:Stereotype" xmi:id="placeholder" name="placeholder">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="placeholder-base_Class" name="base_Class" association="Class_placeholder">
 						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
@@ -5747,17 +5758,6 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Extension" xmi:id="Class_cell css class" name="A_Class_cell css class" memberEnd="extension_cell css class cell css class-base_Class">
 					<ownedEnd xmi:id="extension_cell css class" name="extension_cell css class" type="cell css class" isComposite="true" lower="0" upper="1" memberEnd="extension_cell css class cell css class-base_Class"/>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Stereotype" xmi:id="alert css class" name="alert css class">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="alert css class-base_Class" name="base_Class" association="Class_alert css class">
-						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
-					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="alert css class-alert css class" name="alert css class">
-						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
-					</ownedAttribute>
-				</packagedElement>
-				<packagedElement xmi:type="uml:Extension" xmi:id="Class_alert css class" name="A_Class_alert css class" memberEnd="extension_alert css class alert css class-base_Class">
-					<ownedEnd xmi:id="extension_alert css class" name="extension_alert css class" type="alert css class" isComposite="true" lower="0" upper="1" memberEnd="extension_alert css class alert css class-base_Class"/>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Stereotype" xmi:id="url" name="url">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="url-base_Class" name="base_Class" association="Class_url">
@@ -8017,9 +8017,9 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 			<diagram xmi:id="EAID_1F453D6C_EE9E_4dc9_9DA3_FC8C374520B4">
 				<model package="EAPK_A2DAAD0A_DD64_4389_9CE9_8570378C2BDB" localID="4" owner="EAPK_A2DAAD0A_DD64_4389_9CE9_8570378C2BDB"/>
 				<properties name="UX Navigation State Machine" type="Statechart"/>
-				<project author="dougimac" version="1.0" created="2021-06-30 17:00:32" modified="2021-07-13 10:55:27"/>
+				<project author="dougimac" version="1.0" created="2021-06-30 17:00:32" modified="2021-07-19 12:53:10"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=846;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=12143DA0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=4B4B2A1D;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
@@ -8027,7 +8027,7 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 					<element geometry="Left=38;Top=280;Right=158;Bottom=340;" subject="EAID_B7CC418E_21B7_4dbe_B5BE_29BB873EBDE7" seqno="1" style="DUID=A8207A5F;LWth=0;"/>
 					<element geometry="Left=283;Top=110;Right=403;Bottom=170;" subject="EAID_B3F50CC3_14BE_4297_AF6C_7568F07F6C8B" seqno="2" style="DUID=EF84A8A4;LWth=0;"/>
 					<element geometry="Left=38;Top=111;Right=158;Bottom=171;" subject="EAID_E3B3FFC7_E930_49f3_826E_0705D94FFFA1" seqno="3" style="DUID=EA297944;"/>
-					<element geometry="Left=88;Top=20;Right=108;Bottom=40;" subject="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" seqno="4" style="DUID=CC4F2181;LBL=CX=23:CY=14:OX=28:OY=2:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=88;Top=20;Right=108;Bottom=40;" subject="EAID_3E4C91D6_223B_46ef_817A_E4FB6DC73C34" seqno="4" style="DUID=CC4F2181;LBL=;"/>
 					<element geometry="SX=-59;SY=-1;EX=21;EY=0;EDGE=4;$LLB=;LLT=;LMT=CX=87:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_16CD2CD5_D71C_4c87_9611_3561F3E84BC5" style="Mode=2;EOID=EA297944;SOID=EF84A8A4;Color=-1;LWidth=0;Hidden=0;"/>
 					<element geometry="SX=-61;SY=-25;EX=27;EY=-24;EDGE=4;$LLB=;LLT=;LMT=CX=43:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A443F0FC_6D97_4cd9_A19C_1CCCC5BE7913" style="Mode=2;EOID=EA297944;SOID=EF84A8A4;Color=-1;LWidth=0;Hidden=0;"/>
 					<element geometry="SX=5;SY=-30;EX=-1;EY=18;EDGE=3;$LLB=;LLT=;LMT=CX=32:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A025DD55_116B_48d5_B2AF_29B1A01DA713" style="Mode=2;EOID=A8207A5F;SOID=EA297944;Color=-1;LWidth=0;Hidden=0;"/>
@@ -8038,9 +8038,9 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 			<diagram xmi:id="EAID_BC36505B_0A6D_4d95_8DFA_EB2E701A1222">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" localID="3" owner="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621"/>
 				<properties name="Login" type="Custom"/>
-				<project author="dougimac" version="1.0" created="2021-06-30 16:50:58" modified="2021-07-07 18:16:42"/>
+				<project author="dougimac" version="1.0" created="2021-06-30 16:50:58" modified="2021-07-15 19:55:21"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=846;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=0;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=1;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_B230D054=CDS=1:;OPTIONS_B7525E4D=CDS=1:;OPTIONS_F344A624=AIG={CD33BF7F-0C86-40f4-8962-CA89FAEDA4AE}:;OPTIONS_3F71C865=CDS=1:;OPTIONS_1C2FBB91=CDS=1:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=CCDA7B23;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_5A9AF07B=CDS=1:;OPTIONS_B230D054=CDS=1:;OPTIONS_B7525E4D=CDS=1:;OPTIONS_F344A624=AIG={CD33BF7F-0C86-40f4-8962-CA89FAEDA4AE}:;OPTIONS_3F71C865=CDS=1:;OPTIONS_1C2FBB91=CDS=1:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=1BA23E5F;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
@@ -8058,16 +8058,16 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 					<element geometry="Left=206;Top=385;Right=278;Bottom=414;" subject="EAID_7AF87F89_9F12_4b4c_A00F_7BBE7861452C" seqno="11" style="DUID=B7525E4D;HideIcon=0;LCol=16743168;BCol=16743168;BFol=16777215;font=Calibri;fontsz=100;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;"/>
 					<element geometry="Left=51;Top=288;Right=452;Bottom=430;" subject="EAID_4ED20617_2E3D_4624_95CD_332ABDE3965B" seqno="12" style="DUID=B230D054;HideIcon=0;LWth=0;BCol=16770508;LCol=16770508;BFol=16770508;"/>
 					<element geometry="Left=534;Top=309;Right=695;Bottom=415;" subject="EAID_16DD4401_D6AA_4bfd_BD2B_EA7F2617A6E8" seqno="13" style="DUID=A863469F;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
-					<element geometry="Left=25;Top=28;Right=479;Bottom=583;" subject="EAID_56D7335D_A055_42fd_ACCB_A1FA74FECEBD" seqno="14" style="DUID=5A9AF07B;HideIcon=0;LWth=0;"/>
+					<element geometry="Left=25;Top=28;Right=479;Bottom=583;" subject="EAID_56D7335D_A055_42fd_ACCB_A1FA74FECEBD" seqno="14" style="DUID=5A9AF07B;HideIcon=0;LWth=0;BCol=16052718;LCol=16052718;"/>
 					<element geometry="SX=198;SY=-3;EX=-61;EY=-2;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E19B79AA_FBE3_4fea_83DF_76E93E17655B" style="Mode=1;EOID=A863469F;SOID=B230D054;Color=-1;LWidth=1;Hidden=0;"/>
 				</elements>
 			</diagram>
 			<diagram xmi:id="EAID_74DA49AE_A8B5_444c_8213_DC5089C9BAEB">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" localID="5" owner="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621"/>
 				<properties name="Home" type="Custom"/>
-				<project author="maff" version="1.0" created="2021-07-04 17:38:56" modified="2021-07-07 18:44:44"/>
+				<project author="maff" version="1.0" created="2021-07-04 17:38:56" modified="2021-07-19 14:38:31"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=795;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=1;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=0;AllDockable=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_D96710F0=CDS=1:;OPTIONS_7BEFF3F4=CDS=1:;OPTIONS_210BCC86=CDS=1:;OPTIONS_1F478E11=CDS=1:;OPTIONS_008AE113=AIG={9C8155F8-5126-46da-B558-4A45A896B380}:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=B9622068;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_D96710F0=CDS=1:;OPTIONS_7BEFF3F4=CDS=1:;OPTIONS_210BCC86=CDS=1:;OPTIONS_1F478E11=CDS=1:;OPTIONS_008AE113=AIG={9C8155F8-5126-46da-B558-4A45A896B380}:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=81B9D6E3;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
@@ -8075,7 +8075,7 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 					<element geometry="Left=153;Top=507;Right=498;Bottom=536;" subject="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" seqno="1" style="DUID=6785B496;HideIcon=0;LWth=0;font=Calibri;fontsz=140;bold=1;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=16777215;"/>
 					<element geometry="Left=81;Top=58;Right=162;Bottom=125;" subject="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" seqno="2" style="DUID=008AE113;HideIcon=0;LWth=0;"/>
 					<element geometry="Left=195;Top=62;Right=534;Bottom=124;" subject="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" seqno="3" style="DUID=1F478E11;HideIcon=0;font=Calibri;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;LWth=1;BCol=16770508;LCol=16770508;BFol=8732672;fontsz=180;"/>
-					<element geometry="Left=60;Top=41;Right=602;Bottom=142;" subject="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" seqno="4" style="DUID=210BCC86;HideIcon=0;LCol=16770508;BCol=16770508;BFol=16770508;"/>
+					<element geometry="Left=60;Top=41;Right=602;Bottom=142;" subject="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" seqno="4" style="DUID=210BCC86;HideIcon=0;LCol=16770508;BCol=16770508;BFol=16770508;LWth=0;"/>
 					<element geometry="Left=535;Top=573;Right=597;Bottom=598;" subject="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" seqno="5" style="DUID=7BEFF3F4;HideIcon=0;font=Calibri;fontsz=120;bold=0;black=0;italic=0;charset=0;pitch=34;LWth=1;LCol=16777215;BCol=16777215;ul=1;BFol=14772545;"/>
 					<element geometry="Left=693;Top=375;Right=800;Bottom=484;" subject="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5" seqno="6" style="DUID=8A21359F;NSL=0;BCol=-1;BFol=-1;LCol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LWth=0;"/>
 					<element geometry="Left=251;Top=425;Right=411;Bottom=447;" subject="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" seqno="7" style="DUID=E2D2E87D;HideIcon=0;LWth=0;"/>
@@ -8089,9 +8089,9 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 			<diagram xmi:id="EAID_5A3F79BE_0436_45f5_ACCB_CFA76637D89A">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" localID="6" owner="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621"/>
 				<properties name="Register" type="Custom"/>
-				<project author="maff" version="1.0" created="2021-07-04 18:07:59" modified="2021-07-06 17:41:50"/>
+				<project author="maff" version="1.0" created="2021-07-04 18:07:59" modified="2021-07-18 12:07:52"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=795;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=0;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=1;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=1;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=0;AllDockable=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_A60A3BD4=CDS=1:;OPTIONS_7B166DCD=CDS=1:;OPTIONS_A0489A3F=CDS=1:;OPTIONS_5CE47B21=AIG={CD33BF7F-0C86-40f4-8962-CA89FAEDA4AE}:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=A80A14C3;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=0;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=0;SPT=0;MDGDgm=Wireframing::Webpage Wireframe;STBLDgm=;ShowNotes=0;OPTIONS_A60A3BD4=CDS=1:;OPTIONS_7B166DCD=CDS=1:;OPTIONS_A0489A3F=CDS=1:;OPTIONS_5CE47B21=AIG={CD33BF7F-0C86-40f4-8962-CA89FAEDA4AE}:;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=D11E4857;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
