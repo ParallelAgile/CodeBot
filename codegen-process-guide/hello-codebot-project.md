@@ -110,7 +110,7 @@ There are other ways to bring in custom files e.g. load CSS or images via extern
 
 Creating a full-stack application using CodeBot really is as straightforward as that! No coding required... although CodeBot doesn't shy away from non-trivial applications requiring complex "business logic" code, either.
 
-To illustrate the potential, we've included a working JavaScript code fragment in the model. This code is injected into the REST API and is triggered to run during certain [server-side events](advanced/server-event-handlers). We'll explore what the code does in a follow-up article.
+To illustrate the potential, we've included a working JavaScript code fragment in the model. This code is injected into the REST API and is triggered to run during certain [server-side events](low-code/server-event-handlers). We'll explore what the code does in a follow-up article.
 
 You can also read this [in-depth exploration of Hello CodeBot](https://medium.com/parallel-agile-blog/tutorial-hello-codebot-a-simple-secure-rich-media-low-code-application-2229a4296ea7).
 
