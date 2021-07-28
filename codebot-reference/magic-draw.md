@@ -9,7 +9,9 @@ nav_order: 9
 
 # MagicDraw Support
 
-Our recommended UML modeling system for CodeBot is Enterprise Architect (EA) from Sparx. However, if you're unable to use EA, CodeBot also provides support for alternative modeling tools such as [MagicDraw](https://www.3ds.com/products-services/catia/products/no-magic/) (MD).
+Most of the UML modeling and wireframing examples in this guide are based on Enterprise Architect (EA) from Sparx. However, CodeBot also provides first-class support for [MagicDraw](https://www.3ds.com/products-services/catia/products/no-magic/) (MD), with support for more modeling and UX design frameworks planned.
+
+The guide is mostly the same regardless of which modeling tool you're using. However, inevitably there are a few differences.
 
 This page provides UML modeling documentation for generating full-stack applications with MagicDraw. Also refer to our "Hello CodeBot (MD edition)" project for example model setup and use.
 
