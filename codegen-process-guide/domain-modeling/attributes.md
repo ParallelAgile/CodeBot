@@ -26,7 +26,7 @@ The attribute types are generic and not tied to any particular language. CodeBot
 
 ## Binary file attributes
 
-As mentioned above, the `image` attribute is of type `file`. If you need to define a "binary large object" (BLOB) or simply as a media file of some sort, consider using the file uploads mechanism. This allows you to define an attribute type as a file, and provides you with upload & retrieval API endpoints.
+As mentioned above, the `image` attribute is of type `file`. If you need to define a "binary large object" (BLOB) or simply as a media file of some sort, consider using the [file uploads](../low-code/binary-file-uploads) mechanism. This allows you to define an attribute type as a file, and provides you with upload & retrieval API endpoints.
 
 ## ID attributes
 
