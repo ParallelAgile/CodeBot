@@ -25,15 +25,24 @@ Also, *spoiler alert*... here's the React web-app [already generated and online]
 
 But for a quick run-through of how to generate the project for yourself, read on...
 
-## Download the EA Model and/or XMI file
+## Download the UML Model and/or XMI file
 
-> `>>` Download the [*Hello CodeBot* EA model](../images/hello-codebot/HelloCodeBot-v1.0.0.eapx)
+> `>>` Download the [*Hello CodeBot* model for Enterprise Architect](../images/hello-codebot/HelloCodeBot-EA-latest.zip) (zip includes the `.eapx` EA model, plus the same model exported in XMI format)
 
-Alternatively, here's [the same model exported](../images/hello-codebot/HelloCodeBot-v1.0.0-EA.xml) as an [XMI](https://www.omg.org/spec/XMI/2.1/PDF) file, which you can run via the [CodeBot web console](https://parallelagile.net/) instead of EA.
+> `>>` Download the [*Hello CodeBot* model for MagicDraw](../images/hello-codebot/HelloCodeBot-MD-latest.zip) (already exported as XMI, can be loaded straight into MD)
 
-> You may need to right-click and "save as..." so that the browser doesn't just display the XML contents.
+You can upload either of the above [XMI](https://www.omg.org/spec/XMI/2.1/PDF) versions to the [CodeBot web console](https://parallelagile.net/), in order to generate and deploy the application - we'll show you how to do that in the next section.
 
 The model is worth exploring, as - in addition to being a quick "how-to" guide - it also adheres to the recommended CodeBot [UX modeling best practices](../articles/ux_modeling_tips).
+
+### A quick note about XMI files
+
+In case you were wondering why we're talking about XMI files... XMI stands for [XML Metadata Interchange](https://en.wikipedia.org/wiki/XML_Metadata_Interchange); it's a file format that both EA and MD can export. CodeBot doesn't read the "native" format from either modeling tool (`.eapx` for EA, or `.mdxml` for MD); instead it reads XMI files exported from either tool.
+
+CodeBot understands *XMI 2.1* files exported from EA, and *XMI 2.5* files exported from MD. (Those versions were chosen because they're the default export formats selected by the respective modeling tool).
+
+> For the purpose of this "Hello CodeBot" exercise, though, all you really need to know is: "Upload the XMI file to the CodeBot web console" :)
+
 
 ## Generate the application
 
@@ -48,13 +57,13 @@ In more detail:
 
 The easiest way to try the project out - assuming you have both Enterprise Architect and our EA add-in installed - is to generate the application directly from the model.
 
-First double-click the "eapx" file to load the project into EA. Have a look at the domain model and wireframes while you're there...
+First double-click the `.eapx` file to load the project into EA. Have a look at the domain model and wireframes while you're there...
 
 When you're ready, right-click on the root "Model" package in the Package Browser, and choose `Specialize` > `Parallel Agile` > `Generate Project`.
 
 ### 2. ... or, upload the XMI file to the CodeBot web console
 
-If you don't have either EA or the add-in installed, you can still generate the whole system via the [CodeBot web console](https://parallelagile.net/), using the already-exported XMI file. (Download link above...)
+If you don't have either EA or the add-in installed, you can still generate the whole system via the [CodeBot web console](https://parallelagile.net/), using the already-exported XMI file. (EA and MD links above...)
 
 ## Try it out!
 
@@ -64,6 +73,8 @@ Login to the [web console](https://parallelagile.net/) (if you haven't already),
 
 
 ## More about how *Hello CodeBot* works...
+
+> You're currently on page 2 of the [CodeBot Guide](../codegen-process-guide/) tutorial.
 
 During this tutorial you'll learn in quite some detail how CodeBot interprets the domain model and wireframes. But let's dive into a little bit about how *Hello CodeBot* works... As you'll see in a moment, with CodeBot working for you there's very little that needs to be done, in order to turn your EA model into a full-stack web application.
 

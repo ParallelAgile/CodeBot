@@ -11,16 +11,16 @@ nav_order: 9
 
 Most of the UML modeling and wireframing examples in this guide are based on Enterprise Architect (EA) from Sparx. However, CodeBot also provides first-class support for [MagicDraw](https://www.3ds.com/products-services/catia/products/no-magic/) (MD), with support for more modeling and UX design frameworks planned.
 
-The guide is mostly the same regardless of which modeling tool you're using. However, inevitably there are a few differences.
+The guide is mostly the same regardless of which modeling tool you're using. However, inevitably there are a few differences -- where these differences occur, we show examples for both EA and MD.
 
-This page provides UML modeling documentation for generating full-stack applications with MagicDraw. Also refer to our "Hello CodeBot (MD edition)" project for example model setup and use.
+Additionally, on this page we've collected MD-specific UML modeling documentation for generating full-stack applications with MagicDraw. Also refer to our [Hello CodeBot](../codegen-process-guide/hello-codebot-project) project for an MD-specific example model.
 
 # Generate an application from a MagicDraw model
 
 To generate an MD-based application, perform these steps:
 
 1. Export the full model as an XMI 2.5 file (this has an "xml" file extension)
-2. Log into the CodeBot Web Console and choose a project
+2. Log into the CodeBot [web console](https://parallelagile.net/) and choose a project
 3. Click "Upload XMI", and drag in the XMI file (or select it in your local filesystem)
 4. Hit "Run CodeBot"!
 
@@ -31,8 +31,6 @@ To generate an MD-based application, perform these steps:
 In addition to the usual UML and wireframe modeling semantics, CodeBot reads UML stereotypes and tagged values. MD is stricter than EA in some cases, and requires that both stereotypes and tagged values are defined in a UML profile. (EA has strong support for UML profiles, but the requirement is optional).
 
 We provide a [UML profile](uml-profile) which can be imported into both EA and MD. This profile adds custom stereotypes and tagged values.
-
-# Domain Model
 
 # UI
 
