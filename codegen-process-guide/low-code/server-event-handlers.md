@@ -17,6 +17,31 @@ All event handlers run server-side, so can serve as an "enforcer" of business ru
 
 > If you need custom code to run client-side (e.g. in generated React pages), consider using [state behaviour functions](ui-behavior-functions).
 
+
+# Writing an event handler
+
+Each event handler consists of a JavaScript block, which you write in the "code" section of a UML class Operation (method). This code is then injected into the generated REST API code, inside a JavaScript ES6-style arrow function.
+
+For example, given a domain class called Offer, the following `on create` event handler (your code)...
+
+```JavaScript
+if (offer.amount == 0) return "Offer amount must be greater than 0"
+```
+
+... will be generated as:
+
+```JavaScript
+const onCreate = async (offer, loggedInUser, directive) => {
+    if (offer.amount == 0) return "Offer amount must be greater than 0"
+}
+```
+
+(We explain all the above in this page and the Reference Guide).
+
+
+
+# Example event handler uses
+
 Event handlers have a number of uses, the main ones being:
 
 * veto an event
@@ -25,7 +50,6 @@ Event handlers have a number of uses, the main ones being:
 * check that a user is allowed to access (or modify) the data they're requesting
 
 To define an event, add it to the relevant domain class as an Operation
-
 
 Let's expand on the above list of event handler uses.
 
@@ -99,6 +123,24 @@ The format in the tagged value is simply:
 If you need to add more than one dependency, separate them with commas.
 
 > If the same Node module is specified in several domain classes, be careful that they all use the same version. CodeBot will eliminate duplicates (same name + version), but if it encounters "clashing" versions, it will halt code generation with an error.
+
+
+## Event handlers are domain driven
+
+The idea behind event handlers is that they're domain driven - essentially a captured business rule that's organised as part of the domain model itself, right on the relevant domain class.
+
+As such, they adhere to many of the original ideas behind Domain Driven Design, in that the domain model - as it evolves with increasing amounts of business understanding and detail - captures both the data structure and the business rules, in the form of strict behaviour - validation, filtering etc.
+
+With this in mind, we recommend that event handler code is kept "framework-independent" as far as possible. So the same code could be injected into the generated Express REST API (as it currently is), or into some other architectural component, e.g. a database of executable business rules... or a suite of automated acceptance tests, Model Checking scripts, etc.
+
+With that said, we recognise that event handlers may also be a kind of "Get out of jail free" card, allowing edge cases or vital functionality to be implemented in the generated API.
+
+
+## Event handlers are asynchronous
+
+Each event handler can return nothing at all (`undefined`), a simple object, or - optionally - a JavaScript promise. The latter allows event handlers to run asynchronous tasks, such as sending an email, parsing a JSON document, or running ad-hoc database queries.
+
+Please note, however, that the API server waits for the function to complete before returning its response to the caller. So for a *very* lengthy process (more than a few seconds, say) you might instead want to use the event handler to trigger a separate process, and allow the client to monitor its completion status.
 
 
 

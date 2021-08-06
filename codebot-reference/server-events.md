@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Server-Side Events
-permalink: /codebot-reference/server-side-events
+permalink: /codebot-reference/server-events
 parent: CodeBot Reference
 nav_order: 4
 ---
@@ -14,6 +14,8 @@ Server-side events are triggered in the generated REST API server. For each of t
 * veto the event, e.g. prevent a login occurring
 * modify the event data, e.g. change or remove a field in the response object, or add new "derived" fields
 * check that a user is [allowed to access](../codegen-process-guide/security/abac) (or modify) the data they're requesting
+* log the event on a message queue
+* do pretty much anything else you need it to
 
 To define an event, add it to the relevant domain class as an Operation.
 
@@ -25,7 +27,7 @@ The following server-side events are created:
 | `on create success` | `POST /DomainClass/` | Called just after a record is created |
 | `on file upload success` | `POST /DomainClass/attribute_name/` | Called just after a binary file (PNG, MPEG etc) is uploaded and stored |
 | `on read`      | `GET /DomainClass/`      | Called after an object/record is read from the DB, and just before it's returned in the HTTP response. When multiple records are returned, onRead is called once for each record. A 'veto' will prevent the whole result-set from being sent. |
-| `on read many`      | `GET /DomainClass/`      | Called after a batch of objects/records are read from the DB, and just before they're returned in the HTTP response. Unlike `on read`, `on read many` is called once with an array of all the records that were read. This event handler can be used, for example, to filter the result-set before it's returned. |
+| `on read many`      | `GET /DomainClass/`      | Called after a batch of objects/records are read from the DB, and just before they're returned in the HTTP response. Unlike `on read`, `on read many` is called once with an array of all the records that were read. This event handler can be used, for example, to filter or otherwise mutate the result-set before it's returned. |
 | `on replace`   | `PUT /DomainClass/`      | Called just before an object/record is replaced |
 | `on update`    | `PATCH /DomainClass/`    | Called just before an object/record is updated. An 'update' operation may involve just one or two of the domain object's fields. |
 | `on delete`    | `DELETE /DomainClass/`   | Called just before an object/record is deleted. |
@@ -45,14 +47,52 @@ In the JavaScript-based Express REST API, each Operation name is morphed into "l
 Although some input arguments aren't relevant for all events, we've tried to keep the argument ordering consistent:
 
 ```JavaScript
-(entityName, loggedInUser, directive) => {}
+async (entityName, loggedInUser, directive) => {}
 ```
 
-* `entityName` is the data object, either incoming (for write operations such as `on create` and `on replace`), or outgoing (`on read` etc).
+where `entityName` is the domain class name in lowerCamelCase, e.g. `account`, `hotelReview` or `badDriverReport`.
+
+* `(entityName)` is the data object, either incoming (for write operations such as `on create` and `on replace`), or outgoing (`on read` etc).
 * `loggedInUser` is, as you'd expect, the data object loaded from the DB for the logged-in user identified by their JWT token.
 * `directive` allows you to have some additional control over the response. The `directive` object is placed directly in the response JSON, so you can add custom fields which your own client code can then read.
 
 `directive` is useful particularly for UX, to [direct the user to a different page](../codegen-process-guide/ux/navigation).
+
+There are some exceptions to the above function arguments, as follows.
+
+### `onReadMany` function arguments
+
+The `onReadMany` function arguments are as follows:
+
+```JavaScript
+async (data, loggedInUser, directive) => {}
+```
+
+* `data` is an object containing a single field called `items` - this being an array of all the entity items that have been read.
+* `loggedInUser` - as above.
+* `directive` - as above.
+
+This structure enables the array to be more easily filtered or mapped-over. Just ensure the `data.items` reference is updated with the new array.
+
+For example:
+
+```JavaScript
+data.items = data.items.filter(review => review.rating == 5);
+```
+
+### `onDeleteMany` function arguments
+
+The `onDeleteMany` function arguments are as follows:
+
+```JavaScript
+async (query, loggedInUser, directive) => {}
+```
+
+Because this event handler is run prior to the delete operation taking place, and no "read" is performed first, no "data" object or array is passed in.
+
+Instead, the first arg is instead called `query`, and contains a JavaScript object containing the attribute names and values that will be used in the delete operation.
+
+> If you did want to load the same records to check them before deletion, you could do this in the `onDeleteMany` event handler, by calling the relevant DAO function directly.
 
 
 ## The 'veto' object
