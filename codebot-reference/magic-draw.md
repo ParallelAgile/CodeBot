@@ -3,7 +3,7 @@ layout: page
 title: MagicDraw Support
 permalink: /codebot-reference/magic-draw
 parent: CodeBot Reference
-nav_order: 9
+nav_order: 10
 ---
 
 

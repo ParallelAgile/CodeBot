@@ -4,7 +4,7 @@ title: Binary File Uploads
 permalink: /codegen-process-guide/low-code/binary-file-uploads
 parent: Low-Code Capabilities
 grand_parent: CodeBot Guide
-nav_order: 3
+nav_order: 4
 ---
 
 # Binary File Uploads

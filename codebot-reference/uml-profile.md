@@ -3,7 +3,7 @@ layout: page
 title: UML Profile
 permalink: /codebot-reference/uml-profile
 parent: CodeBot Reference
-nav_order: 8
+nav_order: 9
 ---
 
 # Reference - CodeBot UML Profile
