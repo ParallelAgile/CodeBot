@@ -151,3 +151,15 @@ To find all users aged between 18 and 30 inclusive, with a "beverage" matching a
 ```
 
 The queries are converted into a MongoDB-equivalent query. As we add support for more databases, the above query format will similarly be mapped to each new database.
+
+A number of "comparators" (eq, in etc) are supported, as follows:
+
+| Comparator | Notes  |
+| ---------- | ------ |
+| `eq`       | Equals |
+| `ne`       | Not equal to |
+| `lt`       | Less than |
+| `gt`       | Greater than |
+| `lte`      | Less than or equal to |
+| `gte`      | Greater than or equal to |
+| `in`       | Value matches one of the items in an array |
