@@ -105,6 +105,15 @@ http://localhost:7000/acme/tnt/Order?_limit=1&_sort=id -1
 
 The **Find** and **Count** operations support name-value matching, via a JSON object supplied in the POST request body; e.g:
 
+Let's say we're querying a `User` collection (assuming our own logged-in user belongs to the required **Admin** role):
+
+To find all users:
+
+```json
+{
+}
+```
+
 To find all users with a last_name of "Smith":
 
 ```json
