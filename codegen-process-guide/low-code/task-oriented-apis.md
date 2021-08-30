@@ -59,21 +59,30 @@ Here's a slightly modified version of the domain model we began the tutorial wit
 
 To define the endpoint, create an Operation on the domain class that's "closest" in its context to the task at hand. Sometimes this can be a subjective choice, especially if more than one domain class is involved in the task. In the above example, we've added `redeem coupon` to the `Store`, as it seems like the most logical home for the task.
 
-The default HTTP method for any task is GET (unless the endpoint requires a message body, in which it's POST); so to override this, specify a tagged value on the Operation, as follows:
+## Defining the endpoint's HTTP method
+
+The default HTTP method for any task is GET (unless the endpoint requires a message body, in which it's POST).
+
+To override this, specify a `method` tagged value on the Operation, as follows:
 
 ![API task operation tags](../../images/low-code/api-task-operation-tags.png "API task operation tags")
 
-In the screenshot, we've also tailored the path using the `path` tag. By default, however, the endpoint name is derived from the Operation name using `snake_case`, so (without the `path` tag) the URI for this endpoint would be:
+
+## Defining the endpoint's path
+
+In the above screenshot, we've tailored the path using the `path` tag. By default, however, the endpoint name is derived from the Operation name using `snake_case`, so (without the `path` tag) the URI for this endpoint would be:
 
 ```http
-/lba/Store/redeem_coupon/1234
+/lba/Store/tasks/redeem_coupon/1234
 ```
 
-With the `path` tag, the URI would be:
+With the `path` tag, the URI becomes:
 
 ```http
 /lba/Store/useThatCoupon/1234
 ```
+
+> Note the `/tasks` section of the URI has disappeared. The `path` tag overrides this section as well, so be careful to include it in the tagged value if you want to keep the task endpoints separate from the CRUD endpoints.
 
 The `1234` in the path is the Coupon ID. This is there because the Operation has an input parameter, `Coupon`. Note this must be the specific domain class selected from the model, not just the text "Coupon". The parameter's multiplicity is 1, so the generated endpoint will require a coupon ID in its path.
 
@@ -87,15 +96,21 @@ All that's left, then, is to write the server code that fulfills the task. To do
 
 > The code in the screenshot first checks that the user belongs to a specific "shopper" role. We've put that in as an example usage; however the same check can be achieved without code, using [RBAC](../security/rbac) configuration.
 
-This should be written as a self-contained block of code (no "function xyz()" declaration or "()=> {...}" arrow function), as the code will be contained inside an async function. Additionally, the code will be wrapped in a `try...catch` block, so one doesn't need to be included.
+The Operation should be written as a self-contained block of code (no "function xyz()" declaration or "()=> {...}" arrow function), as the code will be contained inside an async function. Additionally, the code will be wrapped in a `try...catch` block which handles the error response.
+
+### Input parameters
 
 Some local variables will be available to the code:
 
-* the specified Parameters - each param name will, of course, be the parameter name you specify in the model
+* the specified Parameters - each param name will, of course, be the parameter name you specify in the model (albeit converted to `snake_case`)
 * `loggedInUser` - if it's a secure API and the class or endpoint aren't stereotyped as `<<public>>`, this is the User (identity class) that made the API request. All the user attributes are available except for their hashed password
 * `directive` - this is a mostly free-form JavaScript object which may have already been populated by a previous Express middleware function. You can add to the object to send ad-hoc data in the response.
 
-Unlike [event handlers](server-event-handlers), the function should always complete by returning a JSON object. This can optionally be in a Promise (in fact it's very likely it will be). The JSON object should follow this structure:
+### Return type
+
+Unlike [event handlers](server-event-handlers), the function **must always complete by returning a JSON object**. This can optionally be in a Promise (in fact it's very likely it will be).
+
+The object you return must follow this structure:
 
 ```JavaScript
 {
@@ -104,6 +119,8 @@ Unlike [event handlers](server-event-handlers), the function should always compl
   data: []
 }
 ```
+
+Each item is optional. If `status` is undefined or a type besides number, its default is 200. The default for `msg` is based on the status - "Ok", "Not found", "Error" etc.
 
 `data` contains the data to go in the response body. The value can be anything you like (array, object, unary value, undefined).
 
