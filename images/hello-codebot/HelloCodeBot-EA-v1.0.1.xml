@@ -134,7 +134,6 @@
 				</packagedElement>
 				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" name="Wireframes" visibility="public">
 					<packagedElement xmi:type="uml:Class" xmi:id="EAID_89746748_DD73_4197_993C_686A30809515" name="Home Page" visibility="public">
-						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713" name="Label" visibility="public"/>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" name="Page Header" visibility="public">
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" name="Learn About the CodeBot, Luke" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" name="zefram" visibility="public"/>
@@ -172,13 +171,13 @@
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_51015F91_CC0F_4d7c_8A7C_E78258C8AC27" name="Already registered?" visibility="public"/>
 						</nestedClassifier>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_1171B871_D55F_46e4_856B_68E5D3300874" name="Register form" visibility="public">
-							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" name="email" visibility="public"/>
-							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" name="Email" visibility="public"/>
+							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" name="Sign up" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_1363724E_0DAC_4a46_B0F1_68D6594799B3" name="password" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_7A130428_6C24_40db_8F57_0E0131AAF281" name="Password" visibility="public"/>
-							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" name="Sign up" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_423C81E4_578C_4dc5_8902_B7430F06BC5E" name="username" visibility="public"/>
 							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_755AB10E_FA13_4288_9D6A_D7ACC72888B4" name="Username" visibility="public"/>
+							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" name="email" visibility="public"/>
+							<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" name="Email" visibility="public"/>
 						</nestedClassifier>
 						<nestedClassifier xmi:type="uml:Class" xmi:id="EAID_2EF40327_628B_48a6_8940_1394533797C9" name="Register" visibility="public"/>
 					</packagedElement>
@@ -197,7 +196,6 @@
 		<thecustomprofile:precedes base_Dependency="EAID_4106C41F_0DB1_4bf3_99CC_D120AEC44784"/>
 		<thecustomprofile:TOGAF__Invokes base_Dependency="EAID_E8D0CB2A_90B2_4913_98E9_14B65B31F424" __EAStereoName="TOGAF::Invokes"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_89746748_DD73_4197_993C_686A30809515" BorderStyle="Solid"/>
-		<Wireframing:WireframeLabel base_Class="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713" Multiline="false" Align_Text="Left"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" BorderStyle="Solid"/>
 		<thecustomprofile:variant base_Class="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" variant="primary"/>
 		<Wireframing:WireframeLabel base_Class="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" Multiline="false" Align_Text="Center"/>
@@ -252,20 +250,20 @@
 		<thecustomprofile:css_class base_Class="EAID_51015F91_CC0F_4d7c_8A7C_E78258C8AC27" __EAStereoName="css class" css_class="align-middle"/>
 		<Wireframing:WireframeClientArea base_Class="EAID_1171B871_D55F_46e4_856B_68E5D3300874" BorderStyle="Solid"/>
 		<thecustomprofile:variant base_Class="EAID_1171B871_D55F_46e4_856B_68E5D3300874" variant="primary"/>
-		<Wireframing:WireframeTextField base_Class="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C"/>
-		<thecustomprofile:placeholder base_Class="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" placeholder="Your email address"/>
-		<Wireframing:WireframeLabel base_Class="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" Multiline="false" Align_Text="Left"/>
-		<thecustomprofile:cell_css_class base_Class="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" __EAStereoName="cell css class" cell_css_class="text-left"/>
+		<thecustomprofile:action base_Class="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" action="register"/>
+		<Wireframing:WireframeButton base_Class="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" State="Normal"/>
 		<Wireframing:WireframeTextField base_Class="EAID_1363724E_0DAC_4a46_B0F1_68D6594799B3"/>
 		<thecustomprofile:placeholder base_Class="EAID_1363724E_0DAC_4a46_B0F1_68D6594799B3" placeholder="Enter your password"/>
 		<Wireframing:WireframeLabel base_Class="EAID_7A130428_6C24_40db_8F57_0E0131AAF281" Multiline="false" Align_Text="Left"/>
 		<thecustomprofile:cell_css_class base_Class="EAID_7A130428_6C24_40db_8F57_0E0131AAF281" __EAStereoName="cell css class" cell_css_class="text-left"/>
-		<thecustomprofile:action base_Class="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" action="register"/>
-		<Wireframing:WireframeButton base_Class="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" State="Normal"/>
 		<Wireframing:WireframeTextField base_Class="EAID_423C81E4_578C_4dc5_8902_B7430F06BC5E"/>
 		<thecustomprofile:placeholder base_Class="EAID_423C81E4_578C_4dc5_8902_B7430F06BC5E" placeholder="Enter your username"/>
 		<Wireframing:WireframeLabel base_Class="EAID_755AB10E_FA13_4288_9D6A_D7ACC72888B4" Multiline="false" Align_Text="Left"/>
 		<thecustomprofile:cell_css_class base_Class="EAID_755AB10E_FA13_4288_9D6A_D7ACC72888B4" __EAStereoName="cell css class" cell_css_class="text-left"/>
+		<Wireframing:WireframeTextField base_Class="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C"/>
+		<thecustomprofile:placeholder base_Class="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" placeholder="Your email address"/>
+		<Wireframing:WireframeLabel base_Class="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" Multiline="false" Align_Text="Left"/>
+		<thecustomprofile:cell_css_class base_Class="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" __EAStereoName="cell css class" cell_css_class="text-left"/>
 		<Wireframing:WireframeLabel base_Class="EAID_2EF40327_628B_48a6_8940_1394533797C9" Multiline="false" Align_Text="Center"/>
 		<thecustomprofile:css_class base_Class="EAID_2EF40327_628B_48a6_8940_1394533797C9" __EAStereoName="css class" css_class="h1"/>
 		<EAUML:Image base_Artifact="EAID_CD33BF7F_0C86_40f4_8962_CA89FAEDA4AE"/>
@@ -849,19 +847,6 @@
 				<xrefs value="$XREFPROP=$XID={9DBFA1FB-748C-4215-B04B-59DAC51D7349}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeClientArea;FQName=Wireframing::WireframeClientArea;@ENDSTEREO;$DES;$CLT={89746748-DD73-4197-993C-686A30809515}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
-			<element xmi:idref="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713" xmi:type="uml:GUIElement" name="Label" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="85" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeLabel"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-19 18:48:59" modified="2021-07-19 18:48:59" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_8F4B4AB0_9195_a191_9DE3_2175F72FAC77" name="Align Text" value="Left#NOTES#Values: Left,Center,Right&#xA;Default: Left&#xA;" modelElement="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713"/>
-					<tag xmi:id="EAID_22E385B3_8C18_6a8c_BBBA_361C78AD72D9" name="Multiline" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;" modelElement="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={522E18D2-4158-4121-A488-C39158CC1C18}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={DD67FEA7-2D35-46fa-AF71-93389C814713}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
 			<element xmi:idref="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" xmi:type="uml:GUIElement" name="Page Header" scope="public">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_89746748_DD73_4197_993C_686A30809515" tpos="0" ea_localid="69" ea_eleType="element"/>
 				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeClientArea"/>
@@ -1243,30 +1228,17 @@
 					<Dependency xmi:id="EAID_9A35E0E6_C5C9_46a5_BA92_55911D2B1039" start="EAID_1171B871_D55F_46e4_856B_68E5D3300874" end="EAID_16DD4401_D6AA_4bfd_BD2B_EA7F2617A6E8"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" xmi:type="uml:GUIElement" name="email" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="77" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeTextField"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 13:51:22" modified="2021-07-06 13:51:31" complexity="1" status="Proposed"/>
+			<element xmi:idref="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" xmi:type="uml:GUIElement" name="Sign up" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="41" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeButton"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 18:22:48" modified="2021-09-27 21:06:14" complexity="1" status="Proposed"/>
 				<code gentype="&lt;none&gt;"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
-					<tag xmi:id="EAID_BCD6E54B_5874_4fc7_B7A7_AE99CB1DC290" name="placeholder" value="Your email address" modelElement="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C"/>
+					<tag xmi:id="EAID_BA80FA12_1580_4bd7_8F81_398F2BD4961C" name="action" value="register" modelElement="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E"/>
+					<tag xmi:id="EAID_086249E1_57A2_8957_83CD_2F1EA18C805D" name="State" value="Normal#NOTES#Values: Normal,Focused,Selected,Disabled&#xA;Default: Normal&#xA;" modelElement="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E"/>
 				</tags>
-				<xrefs value="$XREFPROP=$XID={CE56AFDE-255D-4348-9AB2-EA81A7C22755}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeTextField;FQName=Wireframing::WireframeTextField;@ENDSTEREO;$DES;$CLT={741B2AFA-E6A1-47f2-9DF9-3C630C36E54C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
-			<element xmi:idref="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" xmi:type="uml:GUIElement" name="Email" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="76" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeLabel"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 13:51:08" modified="2021-07-06 13:51:13" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_8F4B4AB0_9195_a191_A7CD_135B03F31069" name="Align Text" value="Left#NOTES#Values: Left,Center,Right&#xA;Default: Left&#xA;" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
-					<tag xmi:id="EAID_33AC031B_2AA0_42e1_A0DF_F92A291652A4" name="cell css class" value="text-left" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
-					<tag xmi:id="EAID_22E385B3_8C18_6a8c_9186_A7AE5064AF49" name="Multiline" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={B37D3F6E-615F-4c4c-95CB-BEB21098D92A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={31D37850-E085-498d-B5B1-1A906C1698B7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<xrefs value="$XREFPROP=$XID={D0CA4960-118E-4c82-9DBC-D659CD2D2834}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeButton;FQName=Wireframing::WireframeButton;@ENDSTEREO;$DES;$CLT={824A9369-ACFC-46cd-9CA7-86E81CBE022E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
 			<element xmi:idref="EAID_1363724E_0DAC_4a46_B0F1_68D6594799B3" xmi:type="uml:GUIElement" name="password" scope="public">
@@ -1295,19 +1267,6 @@
 				<xrefs value="$XREFPROP=$XID={938BE572-A13E-4f77-9C42-24812FF0197F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={7A130428-6C24-40db-8F57-0E0131AAF281}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
-			<element xmi:idref="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E" xmi:type="uml:GUIElement" name="Sign up" scope="public">
-				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="41" ea_eleType="element"/>
-				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeButton"/>
-				<project author="maff" version="1.0" phase="1.0" created="2021-07-04 18:22:48" modified="2021-09-27 21:06:14" complexity="1" status="Proposed"/>
-				<code gentype="&lt;none&gt;"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_BA80FA12_1580_4bd7_8F81_398F2BD4961C" name="action" value="register" modelElement="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E"/>
-					<tag xmi:id="EAID_086249E1_57A2_8957_83CD_2F1EA18C805D" name="State" value="Normal#NOTES#Values: Normal,Focused,Selected,Disabled&#xA;Default: Normal&#xA;" modelElement="EAID_824A9369_ACFC_46cd_9CA7_86E81CBE022E"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={D0CA4960-118E-4c82-9DBC-D659CD2D2834}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeButton;FQName=Wireframing::WireframeButton;@ENDSTEREO;$DES;$CLT={824A9369-ACFC-46cd-9CA7-86E81CBE022E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Wireframes"/>
-			</element>
 			<element xmi:idref="EAID_423C81E4_578C_4dc5_8902_B7430F06BC5E" xmi:type="uml:GUIElement" name="username" scope="public">
 				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="37" ea_eleType="element"/>
 				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeTextField"/>
@@ -1332,6 +1291,32 @@
 					<tag xmi:id="EAID_22E385B3_8C18_6a8c_914F_B1F65421B645" name="Multiline" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;" modelElement="EAID_755AB10E_FA13_4288_9D6A_D7ACC72888B4"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={49E6C172-AF93-4596-B042-11B8CA87ED88}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={755AB10E-FA13-4288-9D6A-D7ACC72888B4}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+			</element>
+			<element xmi:idref="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C" xmi:type="uml:GUIElement" name="email" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="77" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeTextField"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 13:51:22" modified="2021-07-06 13:51:31" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_BCD6E54B_5874_4fc7_B7A7_AE99CB1DC290" name="placeholder" value="Your email address" modelElement="EAID_741B2AFA_E6A1_47f2_9DF9_3C630C36E54C"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={CE56AFDE-255D-4348-9AB2-EA81A7C22755}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeTextField;FQName=Wireframing::WireframeTextField;@ENDSTEREO;$DES;$CLT={741B2AFA-E6A1-47f2-9DF9-3C630C36E54C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Wireframes"/>
+			</element>
+			<element xmi:idref="EAID_31D37850_E085_498d_B5B1_1A906C1698B7" xmi:type="uml:GUIElement" name="Email" scope="public">
+				<model package="EAPK_0FC5C36A_1277_418d_AB9F_7C7DD7DDA621" owner="EAID_1171B871_D55F_46e4_856B_68E5D3300874" tpos="0" ea_localid="76" ea_eleType="element"/>
+				<properties isSpecification="false" sType="GUIElement" nType="0" scope="public" stereotype="WireframeLabel"/>
+				<project author="maff" version="1.0" phase="1.0" created="2021-07-06 13:51:08" modified="2021-07-06 13:51:13" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_8F4B4AB0_9195_a191_A7CD_135B03F31069" name="Align Text" value="Left#NOTES#Values: Left,Center,Right&#xA;Default: Left&#xA;" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
+					<tag xmi:id="EAID_33AC031B_2AA0_42e1_A0DF_F92A291652A4" name="cell css class" value="text-left" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
+					<tag xmi:id="EAID_22E385B3_8C18_6a8c_9186_A7AE5064AF49" name="Multiline" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;" modelElement="EAID_31D37850_E085_498d_B5B1_1A906C1698B7"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={B37D3F6E-615F-4c4c-95CB-BEB21098D92A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=WireframeLabel;FQName=Wireframing::WireframeLabel;@ENDSTEREO;$DES;$CLT={31D37850-E085-498d-B5B1-1A906C1698B7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Wireframes"/>
 			</element>
 			<element xmi:idref="EAID_2EF40327_628B_48a6_8940_1394533797C9" xmi:type="uml:GUIElement" name="Register" scope="public">
@@ -8251,17 +8236,16 @@ ZGF0VVQFAAdkS+RgUEsFBgAAAAABAAEAPgAAALJOAAAAAA==</tdoc2>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
 				<elements>
-					<element geometry="Left=138;Top=571;Right=228;Bottom=584;" subject="EAID_DD67FEA7_2D35_46fa_AF71_93389C814713" seqno="1" style="DUID=86A8755F;HideIcon=0;"/>
-					<element geometry="Left=153;Top=507;Right=498;Bottom=536;" subject="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" seqno="2" style="DUID=6785B496;HideIcon=0;LWth=0;font=Calibri;fontsz=140;bold=1;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=16777215;"/>
-					<element geometry="Left=81;Top=58;Right=162;Bottom=125;" subject="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" seqno="3" style="DUID=008AE113;HideIcon=0;LWth=0;"/>
-					<element geometry="Left=195;Top=62;Right=534;Bottom=124;" subject="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" seqno="4" style="DUID=1F478E11;HideIcon=0;font=Calibri;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;LWth=1;BCol=16770508;LCol=16770508;BFol=8732672;fontsz=180;"/>
-					<element geometry="Left=60;Top=41;Right=602;Bottom=142;" subject="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" seqno="5" style="DUID=210BCC86;HideIcon=0;LCol=16770508;BCol=16770508;BFol=16770508;LWth=0;"/>
-					<element geometry="Left=535;Top=573;Right=597;Bottom=598;" subject="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" seqno="6" style="DUID=7BEFF3F4;HideIcon=0;font=Calibri;fontsz=120;bold=0;black=0;italic=0;charset=0;pitch=34;LWth=1;LCol=16777215;BCol=16777215;ul=1;BFol=14772545;"/>
-					<element geometry="Left=693;Top=375;Right=800;Bottom=484;" subject="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5" seqno="7" style="DUID=8A21359F;NSL=0;BCol=-1;BFol=-1;LCol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LWth=0;"/>
-					<element geometry="Left=251;Top=425;Right=411;Bottom=447;" subject="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" seqno="8" style="DUID=E2D2E87D;HideIcon=0;LWth=0;"/>
-					<element geometry="Left=60;Top=169;Right=602;Bottom=386;" subject="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" seqno="9" style="DUID=4A4399B6;HideIcon=0;LWth=0;"/>
-					<element geometry="Left=60;Top=488;Right=602;Bottom=555;" subject="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" seqno="10" style="DUID=D96710F0;HideIcon=0;LWth=1;BCol=4564776;LCol=4564776;BFol=4564776;"/>
-					<element geometry="Left=31;Top=21;Right=631;Bottom=614;" subject="EAID_89746748_DD73_4197_993C_686A30809515" seqno="11" style="DUID=E0A48B69;HideIcon=0;LWth=0;"/>
+					<element geometry="Left=153;Top=507;Right=498;Bottom=536;" subject="EAID_CB4123AB_ACDF_443b_BDF9_8D58B97E1534" seqno="1" style="DUID=6785B496;HideIcon=0;LWth=0;font=Calibri;fontsz=140;bold=1;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=16777215;"/>
+					<element geometry="Left=81;Top=58;Right=162;Bottom=125;" subject="EAID_F71D69EF_00F5_4cd8_B486_11835EF286BD" seqno="2" style="DUID=008AE113;HideIcon=0;LWth=0;"/>
+					<element geometry="Left=195;Top=62;Right=534;Bottom=124;" subject="EAID_C76D985D_27F7_4446_A0ED_7C1181A0E1FC" seqno="3" style="DUID=1F478E11;HideIcon=0;font=Calibri;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;LWth=1;BCol=16770508;LCol=16770508;BFol=8732672;fontsz=180;"/>
+					<element geometry="Left=60;Top=41;Right=602;Bottom=142;" subject="EAID_2A254D20_C182_4184_9AD7_9E67AAD9295A" seqno="4" style="DUID=210BCC86;HideIcon=0;LCol=16770508;BCol=16770508;BFol=16770508;LWth=0;"/>
+					<element geometry="Left=535;Top=573;Right=597;Bottom=598;" subject="EAID_A110B724_DA8F_40ef_A2C7_EA8633672FB4" seqno="5" style="DUID=7BEFF3F4;HideIcon=0;font=Calibri;fontsz=120;bold=0;black=0;italic=0;charset=0;pitch=34;LWth=1;LCol=16777215;BCol=16777215;ul=1;BFol=14772545;"/>
+					<element geometry="Left=693;Top=375;Right=800;Bottom=484;" subject="EAID_66A5EE30_7623_4389_AA3B_F884B07455A5" seqno="6" style="DUID=8A21359F;NSL=0;BCol=-1;BFol=-1;LCol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LWth=0;"/>
+					<element geometry="Left=251;Top=425;Right=411;Bottom=447;" subject="EAID_7DD61A98_903B_491d_89C3_11DB2D09EDF5" seqno="7" style="DUID=E2D2E87D;HideIcon=0;LWth=0;"/>
+					<element geometry="Left=60;Top=169;Right=602;Bottom=386;" subject="EAID_76B94B0B_BA97_42b8_BBEB_E751D1D605E2" seqno="8" style="DUID=4A4399B6;HideIcon=0;LWth=0;"/>
+					<element geometry="Left=60;Top=488;Right=602;Bottom=555;" subject="EAID_AB1CEAF8_8C67_4bed_B0BF_670BC0B0BE02" seqno="9" style="DUID=D96710F0;HideIcon=0;LWth=1;BCol=4564776;LCol=4564776;BFol=4564776;"/>
+					<element geometry="Left=31;Top=21;Right=631;Bottom=614;" subject="EAID_89746748_DD73_4197_993C_686A30809515" seqno="10" style="DUID=E0A48B69;HideIcon=0;LWth=0;"/>
 					<element geometry="SX=-5;SY=-95;EX=-4;EY=8;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_39F7877A_729F_4dc8_9225_DE0DD2AE4B88" style="Mode=1;EOID=E2D2E87D;SOID=4A4399B6;Color=-1;LWidth=1;Hidden=0;"/>
 					<element geometry="SX=63;SY=-1;EX=-50;EY=-6;EDGE=2;$LLB=;LLT=;LMT=CX=24:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_85FF292B_A7EA_4156_9A8A_9D6E4AACD95E" style="Mode=1;EOID=8A21359F;SOID=E2D2E87D;Color=-1;LWidth=1;Hidden=0;"/>
 				</elements>
