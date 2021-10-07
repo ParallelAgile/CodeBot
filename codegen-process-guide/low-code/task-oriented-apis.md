@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Task-Oriented APIs
+title: Task APIs
 permalink: /codegen-process-guide/low-code/task-oriented-apis
 parent: Low-Code Capabilities
 grand_parent: CodeBot Guide
 nav_order: 3
 ---
 
-# Task-Oriented APIs
+# Task APIs
 
-Up until this point in the tutorial, the APIs being generated have focused on create, read, update and delete (CRUD) functionality. CRUD operations can be thought of as the basic building blocks of REST APIs; however, many data operations tend to operate at a higher level - combining individual CRUD operations to complete a specific task or goal.
+Up until this point in the tutorial, the APIs being generated have focused on create, read, update and delete (CRUD) functionality. It's a starting point, but it's preferable to base your API on specific tasks (goals, use cases). So instead of using endpoints like "create Invoice" or "modify Invoice", you'd use "send Invoice" and "cancel Invoice".
 
 > More often than not, there's a 1:1 correlation between a task and a use case. So we do recommend first modeling the use cases, then associating each one with the relevant endpoint. This provides a linkage that's in turn useful for identifying test cases.
 
-CodeBot does generate some task-oriented endpoints automatically - in particular, `login` and `register`. But it's possible to define additional task endpoints, to create a REST API that's more structured and goal-driven (use case driven) and not simply based on CRUD operations.
+CodeBot does generate some task-oriented endpoints automatically - in particular, `login` and `register`. But it's possible to define additional task endpoints, to create an entire REST API that's structured around goals (use case driven) and not simply based on CRUD operations.
 
 This in turn can help with defining a more secure API, as data access and updates can be granted based on specific use cases, and not just fine-grained table/row access.
 
@@ -42,7 +42,7 @@ Instead, you could define a task-oriented endpoint called, say, `book hotel room
 
 If the booking process changed later on, you would then only have to modify the server-side code in one place, rather than every web client and mobile app that uses the API.
 
-## How to create a task-oriented endpoint
+## How to create a REST API task endpoint
 
 Returning to the LBA example, let's say we have a use case called "Redeem Coupon". A user has a coupon on their app, and wants to use it to get 20% off a T-shirt at the relevant beach-side store.
 
@@ -57,29 +57,48 @@ Here's a slightly modified version of the domain model we began the tutorial wit
 
 ![LBA Redeem Coupon domain model](../../images/low-code/redeem-coupon-api-task.png "LBA Redeem Coupon domain model")
 
-To define the endpoint, create an Operation on the domain class that's "closest" in its context to the task at hand. Sometimes this can be a subjective choice, especially if more than one domain class is involved in the task. In the above example, we've added `redeem coupon` to the `Store`, as it seems like the most logical home for the task.
+To define the endpoint:
+
+1. Create an Operation on the domain class that's "closest" in its context to the task at hand. 
+> Sometimes this can be a subjective choice, especially if more than one domain class is involved in the task. In the above example, we've added `redeem coupon` to the `Store`, as it seems like the most logical home for the task... in the "real world" if you have a Walmart 20% Off coupon, you head to a nearby Walmart to redeem the coupon.
+2. Define the input parameters - in this case, we need the coupon and the store where it'll be redeemed.
+3. Define the Return Type. As well as being good documentation, this helps CodeBot to generate client libraries and Swagger docs that map the response correctly.
+3. Assign a `<<Task>>` stereotype to the Operation. This is the instruction that tells CodeBot to create a "task" API endpoint.
+
 
 ## Defining the endpoint's HTTP method
 
-The default HTTP method for any task is GET (unless the endpoint requires a message body, in which it's POST).
-
-To override this, specify a `method` tagged value on the Operation, as follows:
+The default HTTP method for any task is GET. To override this, specify a `method` tagged value on the Operation, as follows:
 
 ![API task operation tags](../../images/low-code/api-task-operation-tags.png "API task operation tags")
 
 
-## Defining the endpoint's path
+## The endpoint path
 
-In the above screenshot, we've tailored the path using the `path` tag. By default, however, the endpoint name is derived from the Operation name using `snake_case`, so (without the `path` tag) the URI for this endpoint would be:
+By default, the endpoint path is derived from the Operation name using `snake_case`, so the URI for this endpoint would be:
 
 ```http
-/lba/Store/tasks/redeem_coupon/1234
+/lba/Store/tasks/redeem_coupon/1234?coupon=5678
 ```
 
-With the `path` tag, the URI becomes:
+Because we added two parameters to the Operation, the REST path includes the Store ID ("1234"), while the coupon ID is a query parameter ("coupon=5678").
+
+To define that in a more formulaic way, to map out the parameters CodeBot does the following:
+
+1. The first parameter is considered to be the main "REST resource", so it's always added to the path
+2. Any additional parameters are considered to be "extra details", so they're query parameters.
+
+Parameters can be any of the usual data types (String, int, boolean); or domain objects. In the latter case, the generated code reads the domain object ID from the path (or query param), and automatically looks-up the matching database record. So when your custom task code is reached, you'll have both the store and coupon objects as function arguments, called (predictably) `store` and `coupon`.
+
+If any domain object parameter isn't found (including query params), the API will respond with a 404.
+
+
+## Tailoring the endpoint path
+
+As you can see in the previous screenshot, we've tailored the path using the `path` tag. So the URI will actually be:
 
 ```http
-/lba/Store/useThatCoupon/1234
+/lba/Store/UseThatCoupon/1234?coupon=5678
 ```
 
 > Note the `/tasks` section of the URI has disappeared. The `path` tag overrides this section as well, so be careful to include it in the tagged value if you want to keep the task endpoints separate from the CRUD endpoints.
