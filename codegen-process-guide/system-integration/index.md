@@ -15,4 +15,4 @@ CodeBot continues its policy of "sensible defaults" throughout. So, for example,
 
 If you need to integrate with a non-REST system, or a REST API that deviates from the usual conventions in some way, much of this can be done through configuration and modeling; or, if needed, you can define custom code which handles any edge cases.
 
-> **[> Next: Integrating with another REST API](crud-rest-apis)**
+> **[> Next: Integrating with another REST API](external-rest-apis)**

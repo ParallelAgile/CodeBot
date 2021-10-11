@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Media Player
-permalink: /codebot-reference/ui-components/media-player
+title: Map Picker
+permalink: /codebot-reference/ui-components/map-picker
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 10
+nav_order: 9
 ---
 
-# UI Component Reference: Media Player
+# UI Component Reference: Map Picker
 
-A media player can be either a video player or an audio player, depending on the input type. It can play media from a URL, via the `url` tag (e.g. a YouTube link), or from an uploaded file, by linking the UI element to a domain class and the relevant file attribute.
+A map picker can be used as a form input component, to choose a single 'latitude, longitude' value; or as a simple location chooser; other components can then listen for a UI event via the `bind` tag or a dependency arrow. The map can be populated with map markers, each of which is a domain item loaded via the `domain` tag or by linking the map to a domain class with a Dependency arrow. In this case, the UI selection event will be a `domain object selected` event, much like a table or listbox.
 
 ## Which wireframe component?
 
@@ -17,14 +17,15 @@ Depending which modeling tool you're using, add the following component from the
 
 | Tool    |  Wireframe component(s) |
 | ------- |  ---------------------- |
-| Enterprise Architect | MediaPlayer |
-| Magic Draw | MediaPlayer |
+| Enterprise Architect | MapPicker |
+| Magic Draw | MapPicker |
 
 
 ## Capabilities
 
 |        |  Notes               |
 | ------ |  ------------------- |
+| Domain item chooser | The component can be used as an item selector, to choose a domain object. Can be used in a form, or simply to generate an 'item chosen' event. |
 | Domain data | The component can be linked to a domain class, via the `domain` tag or a dependency arrow. The component will show data loaded from the domain class' relevant API endpoint. |
 | Reactive | The component can listen to UI events triggered by another component, via the `bind` tag or a dependency arrow. |
 | Bind target | Other components can listen and react to this component's' UI events, via their `bind` tag or a dependency arrow pointing to this component. |
@@ -42,6 +43,21 @@ Depending which modeling tool you're using, add the following component from the
 | `variant css class`  |  |  |
 | `cell css class`  |  |  |
 | `variant`<br>&nbsp;or:<br>&nbsp;`appearance`  | Must be one of: primary, secondary, success, danger, warning, info, light, dark, link | Changes a UI Element's appearance. The allowed values are based on Bootstrap's variant CSS classes.<br><br>For React Labels, this will turn the label into an "Alert" component, with a background and text colour matching the variant. Useful for callouts, notes and static warnings ("Clicking OK will delete all your data"). |
+| `single selection`<br>&nbsp;or:<br>&nbsp;`single`  | true or false DEFAULT: `true` if in a form, otherwise `false`. | If `true`, this is a map picker where you select a single location. |
+| `popup message`  |  | An optional message to display in a popup when you click the map selection marker. |
+| `origin`  | `latitude,longitude` string with no spaces, e.g. `25.07037114164013,-77.39571860092475` DEFAULT: `51.505,-0.09` (Central London) | The map’s initial location, if no other location is given (e.g. data-linked, or reacting to the value in a bound component). |
+| `zoom`  |  DEFAULT: `12` | The initial zoom level. |
+| `width`  | any valid CSS size e.g. `50%`, `150px` | Leaflet needs the component size to be set when it’s created, so `width` and `height` tags are provided to enable that. |
+| `height`  | any valid CSS size |  |
+| `marker location attribute`<br>&nbsp;or:<br>&nbsp;`marker location attr`  | domain attribute name, e.g. `store location` DEFAULT: `location` | The map can be linked to a domain class to display multiple map markers. This tag defines the attribute on the linked domain class containing the `latitude,longitude` string value. For each domain object, the marker will be placed at this location. |
+| `tile layer`  | A URL that follows Leaflet's [tile URL format](https://leafletjs.com/reference-1.7.1.html#tilelayer) DEFAULT: An openstreetmap layer | In addition to 'everyday' street maps, Leaflet can be extended with third-party tile layers, e.g. satellite or ESRI topological views. This tag allows you to specify the main tile layer for the map.To choose a tile layer, we recommend [this resource](https://leaflet-extras.github.io/leaflet-providers/preview/). |
+| `tile attribution`  |  DEFAULT: openstreetmap attribution | Attribution text that accompanies the tile layer. This text appears at the bottom-right of the map. |
+| `scroll wheel zoom`  | true or false | Whether the map can be zoomed in or out with the mouse scroll-wheel. |
 
 [Tagged values for all model elements including UI component types](../tagged-values)
+
+## Also see
+
+* [To bind the map to a component, and vice versa (reference)](../ui-component-binding)
+* [State-bound components (tutorial)](../../codegen-process-guide/ux/state-bound-components)
 

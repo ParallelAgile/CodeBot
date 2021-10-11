@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Media Player
-permalink: /codebot-reference/ui-components/media-player
+title: Combo Box
+permalink: /codebot-reference/ui-components/combo-box
 parent: UI Component Reference
 grand_parent: CodeBot Reference
-nav_order: 10
+nav_order: 3
 ---
 
-# UI Component Reference: Media Player
+# UI Component Reference: Combo Box
 
-A media player can be either a video player or an audio player, depending on the input type. It can play media from a URL, via the `url` tag (e.g. a YouTube link), or from an uploaded file, by linking the UI element to a domain class and the relevant file attribute.
+A combobox can be linked to a domain class (via the `domain` tag or a Dependency arrow), to display data from the domain class' relevant API endpoint. Each row shows a single attribute. The selected value is always the domain object's `id` attribute, though UI listeners are given the whole domain object. A combobox can also be linked to an Enumeration, in which case it will display 'hardwired' enum values. The selected value is then the enum name.
 
 ## Which wireframe component?
 
@@ -17,14 +17,17 @@ Depending which modeling tool you're using, add the following component from the
 
 | Tool    |  Wireframe component(s) |
 | ------- |  ---------------------- |
-| Enterprise Architect | MediaPlayer |
-| Magic Draw | MediaPlayer |
+| Enterprise Architect | Combo Box |
+| Magic Draw | Combobox |
 
 
 ## Capabilities
 
 |        |  Notes               |
 | ------ |  ------------------- |
+| Displays a single text value | The component can display an individual text value, which can be derived from a bound UI event (e.g. table row selection). |
+| Domain item chooser | The component can be used as an item selector, to choose a domain object. Can be used in a form, or simply to generate an 'item chosen' event. |
+| Enum chooser | The component can be used to choose from an array of Enumeration values. Can be used in a form, or simply to generate an 'item chosen' event. |
 | Domain data | The component can be linked to a domain class, via the `domain` tag or a dependency arrow. The component will show data loaded from the domain class' relevant API endpoint. |
 | Reactive | The component can listen to UI events triggered by another component, via the `bind` tag or a dependency arrow. |
 | Bind target | Other components can listen and react to this component's' UI events, via their `bind` tag or a dependency arrow pointing to this component. |
@@ -38,6 +41,7 @@ Depending which modeling tool you're using, add the following component from the
 | `domain`  |  | Links a component to a domain class, and optionally an attribute.<br><br>Depending on the component, it will then use the domain data in some way, e.g. to populate a table or listbox with domain data for selection.<br><br>The linked data will be loaded via the domain class' matching REST API endpoint, with loading state managed in the UI via a Redux domain selector.<br><br>Please note: This tag is the same as connecting the element to a domain class with a Dependency arrow. |
 | `display domain`  |  | Specifies which domain class attribute to display.  For cases where the display attribute/relationship is different from the 'data' domain attribute/relationship. |
 | `form domain`  |  | For Domain Chooser UI Elements (listbox, ComboBox), where the form attribute/relationship is different from the 'data' domain attribute/relationship, as two domain classes are involved. |
+| `display text`<br>&nbsp;or:<br>&nbsp;`text`  |  DEFAULT: the UI element name | Text to display, if not using the component name.<br><br>For EA wireframes the element name is normally used; however this tag will override that if the name needs to be different, e.g. to avoid duplicate element names, or if the text won't map well to variable names etc. |
 | `css class`  | Any CSS class name, without a preceding `.` | Adds the specified CSS class (or classes) to the UI element. If you define a class in a custom CSS file, you can apply it to a component using this tag. CodeBot will also recognise any 'standard' Bootstrap CSS classes such as `h1`, `h2` etc; their defined behaviour will be carried over to any future UI platforms that CodeBot generates. |
 | `variant css class`  |  |  |
 | `cell css class`  |  |  |

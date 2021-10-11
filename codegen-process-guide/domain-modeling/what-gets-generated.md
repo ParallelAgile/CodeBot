@@ -22,11 +22,12 @@ Client-side:
 Server-side:
 1. JSON Schema files
 2. Swagger/OpenAPI documentation
-3. Server-side REST API which connects to a MongoDB database
+3. Application code - business logic, state transitions etc
+4. Server-side REST API which connects to a MongoDB database
 
 Each package has its own `README.md` file with setup instructions. Additionally, while designed for reuse, the packages form a dependency hierarchy. So e.g. the domain classes are the "core" building blocks; the API client libraries use the domain classes; the Redux state management library uses the TypeScript client library; the React web-app uses the Redux client library.
 
-On the server, the OpenAPI docs build on the JSON Schema files; the REST API uses the JSON Schema for data validation, and "serves up" the OpenAPI documentation via a server endpoint.
+On the server, the OpenAPI docs build on the JSON Schema files; the REST API uses the JSON Schema for data validation, and "serves up" the OpenAPI documentation via a server endpoint. And the REST API uses the Application code.
 
 
 
@@ -46,17 +47,19 @@ The API layer consists of:
 3. Basic data validation for incoming data - based on the JSON Schema files, which are generated directly from the domain model
 
 
-### Domain Logic layer
+### Application layer
 
-The Domain Logic layer consists of:
+The Application layer consists of:
 
-1. "Task-oriented" operations, which can be reused by other code in this layer, and which in turn makes use of the Data Access Layer (DAL)
+1. "Task" operations, which can be reused by other code in this layer, and which in turn makes use of the Data Access Layer (DAL)
 2. Event handlers - custom validation, data transformations and application logic, which you can define in the model as domain-driven JavaScript functions
 3. Generated state-machine logic (on its way!)
 
-The design goal behind the Domain Logic layer is to keep application code - business rules, data validation etc - separate from implementation details, such as what database the API is connecting to; and also to shield the code as much as possible from details like which API endpoint was called, or even the fact that the code exists in a REST API.
+The design goal behind the Application layer is to provide a space where the domain model (both data and behaviour) exists as "pure" business rules, independent of architecture or design details such as whether it's part of a REST API or writing to a NoSQL database.
 
-To this end, you can enrich each domain class with custom Operations consisting of "pure" business logic, without worrying about the surrounding implementation details.
+To this end, you can enrich each domain class with custom Operations (methods/functions), written in simple JavaScript, which just focus on the domain behaviour.
+
+The Application code can, of course, make requests to read and write data, but the actual data access is abstracted into a separate layer.
 
 
 ### Data Access Layer (DAL)

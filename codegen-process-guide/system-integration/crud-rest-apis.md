@@ -1,22 +1,15 @@
 ---
 layout: page
-title: REST API Custom Event Handlers
+title: REST API CRUD Endpoints
 permalink: /codegen-process-guide/system-integration/crud-rest-apis
 parent: System Integration
 grand_parent: CodeBot Guide
-nav_order: 1
+nav_order: 2
 ---
 
-# Integrating with other REST APIs
+# REST API CRUD Endpoints
 
-Let's say your application needs to call out to some other REST API server - it could be a server maintained by a different team in your organisation, or a third-party REST service running on the internet. We'll generally refer to this as an "external" REST API, in the sense that it's a resource that exists outside your own generated API.
-
-A useful test resource is [JSONPlaceholder](http://jsonplaceholder.typicode.com/), a free online REST API. We'll use it for the example on this page, as JSONPlaceholder provides example APIs that adhere perfectly to established REST conventions.
-
-
-## How the generated API integrates with external systems
-
-To define an external REST resource, think of it in terms of basic Create, Read, Update and Delete (CRUD) functions.  (CRUD functions can be thought of as the basic building blocks of REST; however you can also model more complex "task-oriented" API functions, which we'll cover later).
+A useful test resource when developing or generating a REST client for CRUD operations is [JSONPlaceholder](http://jsonplaceholder.typicode.com/), a free online REST API. We'll use it for the example on this page, as JSONPlaceholder provides example APIs that adhere perfectly to established REST conventions.
 
 
 ## Modeling an external REST API as CRUD functions
@@ -90,5 +83,6 @@ You can also override the entire URL for each endpoint, by using `url` for the O
 
 > The [full set of methods and tailorable Operations](../../codebot-reference/external-rest-endpoints) can be found in the [CodeBot Reference](../../codebot-reference/) section.
 
+> **[> Next: REST API task endpoints](task-rest-apis)**
 
-> **[> Next: Custom UI state behavior functions](ui-behavior-functions)**
+

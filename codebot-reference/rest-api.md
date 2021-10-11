@@ -3,7 +3,7 @@ layout: page
 title: Generated REST API
 permalink: /codebot-reference/rest-api
 parent: CodeBot Reference
-nav_order: 5
+nav_order: 6
 ---
 
 # Reference - Generated REST API

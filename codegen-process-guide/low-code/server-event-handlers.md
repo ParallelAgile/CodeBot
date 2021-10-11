@@ -1,15 +1,13 @@
 ---
 layout: page
-title: REST API Custom Event Handlers
-permalink: /codegen-process-guide/low-code/event-handlers
+title: Server Event Handlers
+permalink: /codegen-process-guide/low-code/server-event-handlers
 parent: Low-Code Capabilities
 grand_parent: CodeBot Guide
 nav_order: 1
 ---
 
-# REST API Custom Event Handlers
-
-Event handlers are the chief mechanism that makes CodeBot a full-fledged Low-Code platform and not just No-Code.
+# Server Event Handlers
 
 Event handlers are designed to encourage domain-driven development, to a quite fundamental level. Each event handler is a custom JavaScript function linked to a particular domain class and event (such as "on create", "on login" or "on update"). As a result, each function is an encapsulation of some discrete element of business domain behaviour, e.g. enforces a business rule or a data validation step.
 

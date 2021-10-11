@@ -3,7 +3,7 @@ layout: page
 title: Tailoring External REST Endpoints
 permalink: /codebot-reference/external-rest-endpoints
 parent: CodeBot Reference
-nav_order: 6
+nav_order: 7
 ---
 
 # Reference - Tailoring External REST Endpoints

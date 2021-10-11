@@ -3,7 +3,7 @@ layout: page
 title: Server-Side Events
 permalink: /codebot-reference/server-events
 parent: CodeBot Reference
-nav_order: 4
+nav_order: 5
 ---
 
 # Reference - Server-Side Events

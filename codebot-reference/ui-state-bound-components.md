@@ -3,7 +3,7 @@ layout: page
 title: UI State-Bound Components
 permalink: /codebot-reference/ui-state-bound-components
 parent: CodeBot Reference
-nav_order: 8
+nav_order: 10
 ---
 
 # Reference - UI State-Bound Components
