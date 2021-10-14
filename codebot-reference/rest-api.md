@@ -10,14 +10,18 @@ nav_order: 6
 
 CodeBot generates a REST API from your domain model; each domain class is turned into one set of API endpoints, chiefly Create, Read, Update, Delete (CRUD) operations.
 
-If you have multiple developers or teams each working with their own domain model, their respective REST APIs can be deployed as microservices, and made to "talk" to each other very easily by defining additional [Interfaces](../../codegen-process-guide/system-integration/crud-rest-apis) for each API.
+If you have multiple developers or teams each working with their own domain model, their respective REST APIs can be deployed as compatible microservices, and [integrated very easily](../../codegen-process-guide/system-integration/microservices) at the domain model level.
 
 While the following details specify what gets generated, we highly recommend that you try generating an application, then loading the OpenAPI/Swagger documentation. This will provide a far more detailed view.
+
+Also see [CRUD operations](crud-operations) for a more general (not REST-specific) reference.
 
 
 ## Determining which classes get an API
 
 Only concrete, top-level classes have an API generated. (By top-level, we mean a class that isn't contained or nested as a sub-object within another class, via Composition).
+
+Additionally, if a domain class has a `<<DTO>>` (Data Transfer Object) stereotype, then it won't have an API generated (or a MongoDB database module, for that matter). The `<<DTO>>` stereotype indicates that the domain class in question is purely used for request-sending and data mapping.
 
 
 ## API paths
@@ -36,7 +40,7 @@ http://localhost:7000/acme/tnt/Customer
 
 
 
-## API operations
+## CRUD API operations
 
 For all data input operations, the incoming domain objects are validated against the generated JSON schema.
 

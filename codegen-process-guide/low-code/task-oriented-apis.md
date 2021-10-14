@@ -13,12 +13,12 @@ Up until this point in the tutorial, the APIs being generated have focused on cr
 
 > More often than not, there's a 1:1 correlation between a task and a use case. So we do recommend first modeling the use cases, then associating each one with the relevant endpoint. This provides a linkage that's in turn useful for identifying and tracing test cases.
 
-CodeBot does generate some task-oriented endpoints automatically - in particular, `login` and `register`. But it's possible to define additional task endpoints, to create an entire REST API that's structured around goals (use case driven) and not simply based on CRUD operations.
+CodeBot does generate some task endpoints automatically - namely, `login` and `register`. But it's possible to define additional task endpoints, to create an entire REST API that's structured around goals (use case driven) and not simply based on [CRUD operations](../../codebot-reference/crud-operations).
 
 This in turn can help with defining a more secure API, as data access and updates can be granted based on specific use cases, and not just fine-grained table/row access.
 
 
-## Why task-oriented? (Practical reasons)
+## Why task-based? (Practical reasons)
 
 Taking `register` as an example, in reality it may combine the following CRUD operations:
 
@@ -34,7 +34,7 @@ Another, more application-specific example could be to book a hotel room on a sp
 
 Of course, you may also need this sequence to be transactional, which wouldn't be possible if each of the 3 steps is invoked as a separate API request.
 
-## Why task-oriented? ('Good design practice' reasons)
+## Why task-based? ('Good design practice' reasons)
 
 Depending how you're approaching your application design, you may also choose to define a task-oriented endpoint for most aspects of your API. Essentially, this separates "CRUD" implementation details from your client code. The web-app shouldn't need to know that in order to book a hotel room, it must create a `HotelReservation` record. It's an abstraction leakage.
 
