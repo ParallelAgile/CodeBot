@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Grants
-permalink: /codebot-reference/api-access-control
+permalink: /codebot-reference/security/grants
 parent: Security Reference
 grand_parent: CodeBot Reference
 nav_order: 2

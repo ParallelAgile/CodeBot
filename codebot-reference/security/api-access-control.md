@@ -1,7 +1,7 @@
 ---
 layout: page
 title: API Access Control
-permalink: /codebot-reference/api-access-control
+permalink: /codebot-reference/security/api-access-control
 parent: Security Reference
 grand_parent: CodeBot Reference
 nav_order: 1
