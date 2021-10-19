@@ -3,7 +3,7 @@ layout: page
 title: UI Component Reference
 permalink: /codebot-reference/ui-components/
 parent: CodeBot Reference
-nav_order: 12
+nav_order: 14
 has_children: true
 ---
 

@@ -33,7 +33,15 @@ Without any operations defined, you'd normally get the default set of CRUD opera
 
 ### Second step: Define the Stripe task operations
 
-To model the payment workflow, we need a `PaymentIntent` and a 
+To model the payment workflow, we need a `PaymentIntent` class, plus a class to represent the response.
+
+Starting with the `PaymentIntent` JSON object, [documentation here](https://stripe.com/docs/api/payment_intents/object)...
+
+![Stripe PaymentIntent documentation](../../images/system-integration/stripe-payment-intent-documentation.png "Stripe PaymentIntent documentation")
+
+From the above Stripe API docs we can pretty easily map this to a domain class, like so:
+
+
 
 
 ### Using Stripe's own Node library
