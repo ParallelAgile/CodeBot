@@ -4,7 +4,7 @@ title: Task APIs
 permalink: /codegen-process-guide/low-code/task-oriented-apis
 parent: Low-Code Capabilities
 grand_parent: CodeBot Guide
-nav_order: 3
+nav_order: 2
 ---
 
 # Task APIs
@@ -206,11 +206,9 @@ This one's fairly easy. Define the external REST API as a [DAO Interface](../sys
 
 ### If the external endpoint is a Task operation...
 
-The external API itself may be task-based, in the sense that it doesn't simply store or retrieve a domain object; e.g. it might be a Machine Learning system that detects license plate numbers from a video file.
+The external API itself may be task-based, in the sense that it doesn't simply store or retrieve a record; e.g. it might be a Machine Learning system that detects license plate numbers from a video file.
 
-In this case, you need to define a separate UML Interface to model the external REST API, then use a Dependency arrow to make the domain class "depend on" the interface.
+In this case, define a separate UML Interface to model the external REST API, then use a Dependency arrow to make the domain class "depend on" the interface. **[More...](../system-integration/task-rest-apis)**
 
-[Find out how to do that here](../system-integration/task-rest-apis)...
+> **[> Next: Custom UI state behavior functions](ui-behavior-functions)**
 
-
-> **[> Next: Binary file uploads](binary-file-uploads)**

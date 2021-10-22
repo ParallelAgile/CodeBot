@@ -11,8 +11,6 @@ nav_order: 2
 
 Using the built-in RBAC definitions, the following grants are available.
 
-> "in the linked domain" means simply the domain class being pointed to by a Dependency arrow.
-
 | Grant   | Notes                 |
 | ------- | --------------------- |
 | add role | The user may assign a role to any user, not including him/herself. |
@@ -29,4 +27,6 @@ Using the built-in RBAC definitions, the following grants are available.
 | update any | The user may update a record belonging to any user in the linked domain. |
 | update own | The user may update ('patch' individual attributes of) a record belonging to them in the linked domain. |
 
-To assign a grant to a domain permission (the Depedency arrow pointing from an Actor to a domain class), add the grant name (e.g. `read any`) as a UML **constraint** to the Dependency arrow.
+> To clarify, "in the linked domain" means simply the domain class being pointed to by a Dependency arrow.
+
+To assign a grant to a domain permission (the Dependency arrow pointing from an Actor to a domain class), add the grant name (e.g. `read any`) as a UML **constraint** to the Dependency arrow.

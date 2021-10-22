@@ -29,7 +29,7 @@ These tags are used on Interfaces that represent a Data Access Object such as an
 
 | Tag      | Allowed values   | Notes               |
 | ---------| ---------------- | ------------------- |
-| `default operations`<br>&nbsp;or:<br>&nbsp;`default ops`, <br>&nbsp;`defaults`  | Multiple values are allowed, but each must be one of: create, replace, update, read one, find one, get many, find many, count, delete one, delete many | Specifies the default CRUD operations that CodeBot should generate on the DAO interface pointed to by this domain class. Please note: This tag is placed on the class or dependency pointing to the Interface, not the interface itself. |
+| `default operations`<br>&nbsp;or:<br>&nbsp;`default ops`, <br>&nbsp;`defaults`  | Multiple values are allowed, but each must be one of: create, file upload, replace, update, read one, find one, login, register, get many, find many, count, delete one, delete many | Specifies the default CRUD operations that CodeBot should generate on the DAO interface pointed to by this domain class. Please note: This tag is placed on the class or dependency pointing to the Interface, not the interface itself. |
 | `path`  |  | For external REST APIs, an additional path that is appended to the base URL for operations. |
 | `url`  |  | The base URL for external REST APIs. |
 

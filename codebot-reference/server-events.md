@@ -8,7 +8,7 @@ nav_order: 5
 
 # Reference - Server-Side Events
 
-Server-side events are triggered in the generated REST API server. For each of these, you can write an event handler in JavaScript - this custom function can:
+Server events are triggered in the generated REST API server. For each of these, you can write an event handler in JavaScript - this custom function can:
 
 * perform validation on incoming "create" or "update" domain objects
 * veto the event, e.g. prevent a login occurring
@@ -17,28 +17,61 @@ Server-side events are triggered in the generated REST API server. For each of t
 * log the event on a message queue
 * do pretty much anything else you need it to
 
-To define an event, add it to the relevant domain class as an Operation.
+To define an event, add it to the relevant domain class as an Operation. The operation name may follow the naming convention described near the end of this page.
 
-The following server-side events are created:
+## Where the event handlers are placed in the generated code
+
+Currently these event handlers are treated as "API layer" events, and so are placed in the respective domain-class API module (e.g. "AccountApi.js").
+However, please note that they'll soon be moved to the application layer, as they're really just another place to define and enforce application logic/business rules (validation, etc).
+This shouldn't affect how they're written, but it does mean that they'll also be available in the separate "Application" codebase - see the `application` folder in the generated zipfile.
+
+## "Request-triggered" event types
+
+The majority of server events are triggered by an incoming request.
+
+For each such request, the following types of event are triggered, and can be "caught" by an event handler:
+
+| Event type    | When called...        | Example uses      |
+| ------------- | --------------------- | ----------------- |
+| `on ...``     | Just before the requested operation happens. This allows the event itself to be vetoed before it happens. | Rules-based data validation that goes beyond the built-in attribute type checking; e.g. validate an incoming 'create' object, and veto the request if the object validation fails. |
+| `on success`` | Just after an operation has successfully completed, before the response is sent back to the client. | Modify the response object in some way, e.g. rename, add or remove fields; additional logging; post the result to a message queue. |
+| `on failure`` | Just after an operation failed in some way, before the response is sent back to the client. | Modify the error message; additional error logging; trigger a "rainy day" execution flow in the case of a particular error. |
+
+## "Request-triggered" events
+
+The following server-side events are triggered by incoming API requests:
 
 | Event         | API endpoint             | Notes              |
 | ------------- | ------------------------ | ------------------ |
-| `on create`    | `POST /DomainClass/`     | Called just before an object/record is created |
-| `on create success` | `POST /DomainClass/` | Called just after a record is created |
-| `on file upload success` | `POST /DomainClass/attribute_name/` | Called just after a binary file (PNG, MPEG etc) is uploaded and stored |
-| `on read`      | `GET /DomainClass/`      | Called after an object/record is read from the DB, and just before it's returned in the HTTP response. When multiple records are returned, onRead is called once for each record. A 'veto' will prevent the whole result-set from being sent. |
-| `on read many`      | `GET /DomainClass/`      | Called after a batch of objects/records are read from the DB, and just before they're returned in the HTTP response. Unlike `on read`, `on read many` is called once with an array of all the records that were read. This event handler can be used, for example, to filter or otherwise mutate the result-set before it's returned. |
-| `on replace`   | `PUT /DomainClass/`      | Called just before an object/record is replaced |
-| `on update`    | `PATCH /DomainClass/`    | Called just before an object/record is updated. An 'update' operation may involve just one or two of the domain object's fields. |
-| `on delete`    | `DELETE /DomainClass/`   | Called just before an object/record is deleted. |
-| `on start`     | | Called once when the domain API starts up. This may be used, for example, to call the associated DAO to create "bootstrap" data. |
-| `_init`    | | Allows variables or resources to be initialised at the "module scope" of the domain API. `_init` code shouldn't be wrapped in an arrow function; instead the block of code is placed and run directly at the top of the module. This allows variables to be declared that can then be accessed by other functions in the same module. Use with care! |
+| `on com parallelagile services codebot umlmodel  crud operation  create 98d 1f 05b`<br>`on com parallelagile services codebot umlmodel  crud operation  create 98d 1f 05b success`<br>`on com parallelagile services codebot umlmodel  crud operation  create 98d 1f 05b failure`<br> | POST  | Creates a new domain object/record. |
+| `on com parallelagile services codebot umlmodel  crud operation  file upload 19d 05cab`<br>`on com parallelagile services codebot umlmodel  crud operation  file upload 19d 05cab success`<br>`on com parallelagile services codebot umlmodel  crud operation  file upload 19d 05cab failure`<br> | POST  | Uploads a binary file (PNG, MPEG etc) for storage outside the database, e.g. filesystem or S3. |
+| `on com parallelagile services codebot umlmodel  crud operation  replace ce 37e 901`<br>`on com parallelagile services codebot umlmodel  crud operation  replace ce 37e 901 success`<br>`on com parallelagile services codebot umlmodel  crud operation  replace ce 37e 901 failure`<br> | PUT  | Replaces the whole record that matches the ID provided in the request path, given a JSON object in the request body. The JSON object doesn't need to include the ID itself. |
+| `on com parallelagile services codebot umlmodel  crud operation  update a 922c 1f 4`<br>`on com parallelagile services codebot umlmodel  crud operation  update a 922c 1f 4 success`<br>`on com parallelagile services codebot umlmodel  crud operation  update a 922c 1f 4 failure`<br> | PATCH  | Updates (patches) individual fields in the record that matches the ID provided in the request path. The fields to patch are provided as a JSON object in the request body. |
+| `on com parallelagile services codebot umlmodel  crud operation  read one 2ff 58569`<br>`on com parallelagile services codebot umlmodel  crud operation  read one 2ff 58569 success`<br>`on com parallelagile services codebot umlmodel  crud operation  read one 2ff 58569 failure`<br> | GET  | Returns up to 1 item in this domain that matches the ID provided in the request path. |
+| `on com parallelagile services codebot umlmodel  crud operation  find one 91994672`<br>`on com parallelagile services codebot umlmodel  crud operation  find one 91994672 success`<br>`on com parallelagile services codebot umlmodel  crud operation  find one 91994672 failure`<br> | GET  | Returns up to 1 item in this domain that matches the query provided in the request body. |
+| `on com parallelagile services codebot umlmodel  crud operation  login 4401b 388`<br>`on com parallelagile services codebot umlmodel  crud operation  login 4401b 388 success`<br>`on com parallelagile services codebot umlmodel  crud operation  login 4401b 388 failure`<br> | POST  | Authenticates the user via username/password in the request body. |
+| `on com parallelagile services codebot umlmodel  crud operation  register 6ed 2b 0cc`<br>`on com parallelagile services codebot umlmodel  crud operation  register 6ed 2b 0cc success`<br>`on com parallelagile services codebot umlmodel  crud operation  register 6ed 2b 0cc failure`<br> | POST  | Creates a new user record, or 'identity'. The password is hashed before being written to the database. |
+| `on com parallelagile services codebot umlmodel  crud operation  get many 3f 27dabd`<br>`on com parallelagile services codebot umlmodel  crud operation  get many 3f 27dabd success`<br>`on com parallelagile services codebot umlmodel  crud operation  get many 3f 27dabd failure`<br> | GET  | Returns all items in this domain that match the query provided in the request query parameters. When multiple records are returned, the event handler is called once for each record. A 'veto' will prevent the whole result-set from being sent. |
+| `on com parallelagile services codebot umlmodel  crud operation  find many b 821b 4e 4`<br>`on com parallelagile services codebot umlmodel  crud operation  find many b 821b 4e 4 success`<br>`on com parallelagile services codebot umlmodel  crud operation  find many b 821b 4e 4 failure`<br> | POST /find | Returns all items in this domain that match the query provided in the request body. |
+| `on com parallelagile services codebot umlmodel  crud operation  count 72835433`<br>`on com parallelagile services codebot umlmodel  crud operation  count 72835433 success`<br>`on com parallelagile services codebot umlmodel  crud operation  count 72835433 failure`<br> | POST /count | Returns the number of items in this domain that match the query provided in the request. |
+| `on com parallelagile services codebot umlmodel  crud operation  delete one ba 3e 70e 0`<br>`on com parallelagile services codebot umlmodel  crud operation  delete one ba 3e 70e 0 success`<br>`on com parallelagile services codebot umlmodel  crud operation  delete one ba 3e 70e 0 failure`<br> | DELETE  | Deletes a single item in this domain if it matches the ID provided in the request. |
+| `on com parallelagile services codebot umlmodel  crud operation  delete many 9c 1e 0bad`<br>`on com parallelagile services codebot umlmodel  crud operation  delete many 9c 1e 0bad success`<br>`on com parallelagile services codebot umlmodel  crud operation  delete many 9c 1e 0bad failure`<br> | DELETE  | Deletes any items in this domain that match the query provided in the request. |
+| `on (task)`<br>`on (task) success`<br>`on (task) failure`<br> | /task/....  | Given a custom task-based API endpoint, these server events are triggered and can be handled just like the built-in CRUD API events. |
+
+## Other server events
+
+The above events are triggered by incoming API requests. Additionally, a small number of "non-request" server events can be listened for:
+
+| Event         | Notes              |
+| ------------- | ------------------ |
+| `on start`    | Called once when the domain API starts up. This may be used, for example, to call the associated DAO to create "bootstrap" data. |
+| `_init`       | Allows variables or resources to be initialised at the "module scope" of the domain API. `_init` code shouldn't be wrapped in an arrow function; instead the block of code is placed and run directly at the top of the module. This allows variables to be declared that can then be accessed by other functions in the same module. Use with care! |
 
 If the operation involves multiple records, the event will be called once for each record (except for `on read many`, which is called once with the complete record-set). A 'veto' will prevent the operation completing for the whole record-set.
 
 ## Naming
 
-In the above table, we've used "lower sentence case" for each event/Operation name. We recommend this convention is used in your own domain model, as it retains a "business specification" feel to the domain model - plus it's just nicer to read.
+In the above tables, we've used "lower sentence case" for each event/Operation name. We recommend this convention is used in your own domain model, as it retains a "business specification" feel to the domain model - plus it's just nicer to read.
 
 In the JavaScript-based Express REST API, each Operation name is morphed into "lowerCamelCase".
 
@@ -149,4 +182,3 @@ In the case where an operation involves multiple records (therefore potentially 
 ```
 
 Additionally, the first occurring status code will be used, or the default `400` if none was specified.
-

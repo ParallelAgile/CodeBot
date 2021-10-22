@@ -4,7 +4,7 @@ title: Custom State Behavior Functions
 permalink: /codegen-process-guide/low-code/state-behavior-functions
 parent: Low-Code Capabilities
 grand_parent: CodeBot Guide
-nav_order: 2
+nav_order: 3
 ---
 
 # Custom State Behavior Functions
@@ -79,4 +79,4 @@ When writing JavaScript (or TypeScript) code for these functions, we recommend t
 Try to avoid writing platform-specific code in these functions. Of course, if it's really needed, it's needed - e.g. if the code triggers a page rerender, you may need to use a `dispatch` call to keep the React UI responsive. However, keeping the code at a "business rules" level and well-scoped within its target domain should help avoid this issue.
 
 
-> **[> Next: Task APIs](task-oriented-apis)**
+> **[> Next: Node libraries](adding-node-libraries)**

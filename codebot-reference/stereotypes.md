@@ -22,6 +22,7 @@ The stereotypes are grouped here by their general category.
 | DTO | `Class` | Indicates that this domain class is a Data Transfer Object (DTO). By default, a class is both a `<<DTO>>` and an `<<ExpressAPI>>`, as long as neither stereotype is specified. So if you add `<<DTO>>`, and also want the class to have an Express API, also add `<<ExpressAPI>>`. |
 | ExpressAPI | `Class` | Indicates that this domain class is part of the generated Express REST API, and will have its own set of API endpoints. Each class is an `<<ExpressAPI>>` by default; however the stereotype can be specified either for documentation purposes, or to override some other configuration, e.g. the class is a `<<DTO>>`. |
 | Identity | `Class` | Indicates that this class represents the 'user', i.e. a registered or authenticated account. Only one class can be the Identity. Use roles (Actors) to define different types of user; and nested objects (Composition) to handle the case where different types of user need different attributes. |
+| Optional | `Attribute` | If an attribute is optional, its absence in a data record won't fail validation checks. |
 | Public | `Class` | The API will allow any user, including anonymous/not-logged-in users, to read data from a domain class if it has this stereotype.Only 'read' access is allowed, though - anonymous users can't create, modify or delete data. |
 | entity | `Class` | Usually a domain class is an 'entity' (data object) by default, so will have its own set of API endpoints, database collection/table etc. This stereotype can be used to either document that it's an entity, or enforce it. |
 | testcase | `Class` |  |
@@ -39,6 +40,7 @@ The stereotypes are grouped here by their general category.
 | ---------- | ------------------------- | ------------------- |
 | DefaultRole | `Actor` | When a user signs up via /register, any roles with this stereotype are automatically assigned to the new user. |
 | FirstUserRole | `Actor` | When the first user in the system signs up via /register, any roles with this stereotype are automatically assigned to the new user. This allows the first user to be given admin permissions. |
+| Superuser | `Actor` | This stereotype gives a role 'superuser' permissions, i.e. all grants across all domain classes. |
 
 ### Task Stereotypes
 
