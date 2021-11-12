@@ -13,6 +13,7 @@ Using the built-in RBAC definitions, the following grants are available.
 
 | Grant   | Notes                 |
 | ------- | --------------------- |
+| all | Shortcut that means 'all grants'. 'ANY' may also be used, and has the exact same meaning. |
 | add role | The user may assign a role to any user, not including him/herself. |
 | add role to self | The user may assign a role to him/herself. This is, of course, quite a special form of grant, as it allows the user to 'bootstrap' their power within the application. However at least one 'superuser' may need this grant, so that new roles may be accessed. |
 | create | The user may create a new record in the linked domain. |

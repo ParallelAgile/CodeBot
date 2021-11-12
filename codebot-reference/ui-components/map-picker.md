@@ -39,6 +39,7 @@ Depending which modeling tool you're using, add the following component from the
 | `domain`  |  | Links a component to a domain class, and optionally an attribute.<br><br>Depending on the component, it will then use the domain data in some way, e.g. to populate a table or listbox with domain data for selection.<br><br>The linked data will be loaded via the domain class' matching REST API endpoint, with loading state managed in the UI via a Redux domain selector.<br><br>Please note: This tag is the same as connecting the element to a domain class with a Dependency arrow. |
 | `display domain`  |  | Specifies which domain class attribute to display.  For cases where the display attribute/relationship is different from the 'data' domain attribute/relationship. |
 | `form domain`  |  | For Domain Chooser UI Elements (listbox, ComboBox), where the form attribute/relationship is different from the 'data' domain attribute/relationship, as two domain classes are involved. |
+| `filter`  |  | Define a single-line predicate (valid TypeScript expression that evaluates to a boolean) to filter a UI list. |
 | `css class`  | Any CSS class name, without a preceding `.` | Adds the specified CSS class (or classes) to the UI element. If you define a class in a custom CSS file, you can apply it to a component using this tag. CodeBot will also recognise any 'standard' Bootstrap CSS classes such as `h1`, `h2` etc; their defined behaviour will be carried over to any future UI platforms that CodeBot generates. |
 | `variant css class`  |  |  |
 | `cell css class`  |  |  |
@@ -46,7 +47,7 @@ Depending which modeling tool you're using, add the following component from the
 | `single selection`<br>&nbsp;or:<br>&nbsp;`single`  | true or false DEFAULT: `true` if in a form, otherwise `false`. | If `true`, this is a map picker where you select a single location. |
 | `popup message`  |  | An optional message to display in a popup when you click the map selection marker. |
 | `origin`  | `latitude,longitude` string with no spaces, e.g. `25.07037114164013,-77.39571860092475` DEFAULT: `51.505,-0.09` (Central London) | The map’s initial location, if no other location is given (e.g. data-linked, or reacting to the value in a bound component). |
-| `zoom`  |  DEFAULT: `12` | The initial zoom level. |
+| `zoom`  | 1 to 12 DEFAULT: `12` | The initial zoom level. |
 | `width`  | any valid CSS size e.g. `50%`, `150px` | Leaflet needs the component size to be set when it’s created, so `width` and `height` tags are provided to enable that. |
 | `height`  | any valid CSS size |  |
 | `marker location attribute`<br>&nbsp;or:<br>&nbsp;`marker location attr`  | domain attribute name, e.g. `store location` DEFAULT: `location` | The map can be linked to a domain class to display multiple map markers. This tag defines the attribute on the linked domain class containing the `latitude,longitude` string value. For each domain object, the marker will be placed at this location. |

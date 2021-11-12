@@ -23,7 +23,7 @@ The stereotypes are grouped here by their general category.
 | ExpressAPI | `Class` | Indicates that this domain class is part of the generated Express REST API, and will have its own set of API endpoints. Each class is an `<<ExpressAPI>>` by default; however the stereotype can be specified either for documentation purposes, or to override some other configuration, e.g. the class is a `<<DTO>>`. |
 | Identity | `Class` | Indicates that this class represents the 'user', i.e. a registered or authenticated account. Only one class can be the Identity. Use roles (Actors) to define different types of user; and nested objects (Composition) to handle the case where different types of user need different attributes. |
 | Optional | `Attribute` | If an attribute is optional, its absence in a data record won't fail validation checks. |
-| Public | `Class` | The API will allow any user, including anonymous/not-logged-in users, to read data from a domain class if it has this stereotype.Only 'read' access is allowed, though - anonymous users can't create, modify or delete data. |
+| Public | `Class`, `Operation` | The API will allow any user, including anonymous/not-logged-in users, to read data from a domain class if it has this stereotype. Only 'read' access is allowed, though - anonymous users can't create, modify or delete data. If this stereotype is added to a 'task' Operation (not the parent class), then the task API endpoint can be invoked by anonymous (unauthenticated) users. |
 | entity | `Class` | Usually a domain class is an 'entity' (data object) by default, so will have its own set of API endpoints, database collection/table etc. This stereotype can be used to either document that it's an entity, or enforce it. |
 | testcase | `Class` |  |
 
@@ -47,13 +47,15 @@ The stereotypes are grouped here by their general category.
 | Stereotype | For model elements | Notes               |
 | ---------- | ------------------------- | ------------------- |
 | Application | `Operation` | Indicates that this Operation should be placed in the Application Layer of the app server. Required if the Operation represents a custom CRUD function. |
-| Task | `Operation` | Indicates that this Operation is a task endpoint. The presence of this stereotype will result in a REST API endpoint, Swagger docs, and default app-layer function (which can be customised or replaced entirely with code). |
+| Task | `Operation` | Indicates that this Operation is a task endpoint. The presence of this stereotype will result in a REST API endpoint, Swagger docs, and default app-layer function (which can be customised or replaced entirely with code). Note: A Task stereotype on a 'public' domain class is still secured (requires authentication). |
 
 ### Ui Stereotypes
 
 | Stereotype | For model elements | Notes               |
 | ---------- | ------------------------- | ------------------- |
 | Button | `UI Element` | Indicates that this is a Button component. |
+| CbComponent | `UI Element` | Common supertype for UI Element types (components) in the CodeBot UML profile. |
+| Image | `Asset` | Reserved for Image assets added to the model as 'internal' artifacts. |
 | Label | `UI Element` | Label component. However you can add certain other stereotypes from the CodeBot (CB) profile, to turn a label into another component type such as an Image or Map Picker (if these aren't available in your wireframing tool). |
 | Navigation | `Diagram` | Indicates that a State Machine specifies the UI navigation, or user journey. |
 | Panel | `UI Element` | MagicDraw 'container' component. |

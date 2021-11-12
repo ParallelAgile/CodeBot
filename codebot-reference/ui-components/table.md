@@ -40,12 +40,13 @@ Depending which modeling tool you're using, add the following component from the
 | `domain`  |  | Links a component to a domain class, and optionally an attribute.<br><br>Depending on the component, it will then use the domain data in some way, e.g. to populate a table or listbox with domain data for selection.<br><br>The linked data will be loaded via the domain class' matching REST API endpoint, with loading state managed in the UI via a Redux domain selector.<br><br>Please note: This tag is the same as connecting the element to a domain class with a Dependency arrow. |
 | `display domain`  |  | Specifies which domain class attribute to display.  For cases where the display attribute/relationship is different from the 'data' domain attribute/relationship. |
 | `form domain`  |  | For Domain Chooser UI Elements (listbox, ComboBox), where the form attribute/relationship is different from the 'data' domain attribute/relationship, as two domain classes are involved. |
+| `filter`  |  | Define a single-line predicate (valid TypeScript expression that evaluates to a boolean) to filter a UI list. |
 | `css class`  | Any CSS class name, without a preceding `.` | Adds the specified CSS class (or classes) to the UI element. If you define a class in a custom CSS file, you can apply it to a component using this tag. CodeBot will also recognise any 'standard' Bootstrap CSS classes such as `h1`, `h2` etc; their defined behaviour will be carried over to any future UI platforms that CodeBot generates. |
 | `variant css class`  |  |  |
 | `cell css class`  |  |  |
 | `variant`<br>&nbsp;or:<br>&nbsp;`appearance`  | Must be one of: primary, secondary, success, danger, warning, info, light, dark, link | Changes a UI Element's appearance. The allowed values are based on Bootstrap's variant CSS classes.<br><br>For React Labels, this will turn the label into an "Alert" component, with a background and text colour matching the variant. Useful for callouts, notes and static warnings ("Clicking OK will delete all your data"). |
 | `columns`<br>&nbsp;or:<br>&nbsp;`column`, <br>&nbsp;`attribute`  |  DEFAULT: All attributes except `id`. | For a data-linked table, this specifies which attributes to display as table columns. |
-| `size`  | Must be one of: sm | Cuts the table row spacing in half |
+| `table size`  | Must be one of: sm | Cuts the table row spacing in half |
 | `multi selection`<br>&nbsp;or:<br>&nbsp;`multiple selection`, <br>&nbsp;`multi`  | true or false DEFAULT: `false` | If `true`, multiple items can be selected; if 'false', it's single-selection only. |
 
 [Tagged values for all model elements including UI component types](../tagged-values)
